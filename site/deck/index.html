@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curious Endeavor — AI-Native Creative Agency</title>
+<meta name="description" content="CE is an agentic agency built by us. Strategy, campaigns, production assets — at a fraction of agency retainers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://use.typekit.net" crossorigin>
+<link rel="stylesheet" href="https://use.typekit.net/ffj8sbd.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/components/ce-hero/ce-hero.css">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --red: #cc0000;
+  --black: #1a1a1a;
+  --grey: #666;
+  --light: #999;
+  --border: #eee;
+  --bg: #fff;
+}
+
+html { font-size: 16px; }
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-weight: 300;
+  background: var(--bg);
+  color: var(--black);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── Nav — logo bar ── */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  transition: height 0.3s ease;
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  max-width: 1400px;
+  width: 100%;
+  padding: 0 48px;
+}
+nav.scrolled {
+  height: 44px;
+}
+nav.scrolled .nav-brand img {
+  height: 16px;
+}
+.nav-brand { display: flex; align-items: center; }
+.nav-brand img { height: 20px; display: block; transition: height 0.2s ease; }
+
+/* ── Container — match Grid page ── */
+.container { max-width: 1400px; margin: 0 auto; padding: 0 48px; }
+
+/* ── Utility: outcome callout ── */
+.outcome-callout {
+  color: var(--light);
+  font-size: 12px;
+  font-style: normal;
+  display: block;
+  margin-top: 10px;
+}
+
+/* ── Utility: engine body paragraphs ── */
+.engine-body + .engine-body {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--grey);
+}
+
+/* ── POC box typography ── */
+.poc-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--red);
+  margin-bottom: 8px;
+}
+.poc-title {
+  font-family: 'larken', serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.poc-desc {
+  font-size: 14px;
+  color: var(--grey);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.poc-link {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--red);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+/* ── Hero uses shared ce-hero component (see /components/ce-hero/) ── */
+
+/* ── Opportunity visual area ── */
+.opportunity-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.opportunity-visual {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+.opportunity-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 12px; padding: 8px 16px;
+  border: 1px solid var(--border); margin-bottom: 32px;
+}
+.hero-badge img { height: 18px; }
+.hero-badge-text { font-size: 12px; color: var(--grey); font-weight: 500; }
+.hero h1 {
+  font-family: 'larken', serif;
+  font-size: clamp(22px, 2.4vw, 36px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0;
+  white-space: nowrap;
+}
+.hero h1 em { font-style: normal; color: var(--red); }
+.hero-desc {
+  font-size: 14px;
+  color: var(--grey);
+  margin: 0;
+  line-height: 1.6;
+}
+.hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255,255,255,0.5);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  z-index: 2;
+}
+.scroll-line {
+  width: 1px;
+  height: 48px;
+  background: var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.scroll-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--red);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+@keyframes scrollPulse {
+  0% { transform: translateY(-100%); }
+  50% { transform: translateY(0); }
+  100% { transform: translateY(100%); }
+}
+
+/* ── Buttons — Grid style ── */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px;
+  font-size: 12px; font-weight: 500; text-decoration: none;
+  text-transform: uppercase; letter-spacing: 0.08em; transition: opacity 0.2s;
+}
+.btn-primary { background: var(--red); color: #fff; }
+.btn-primary:hover { opacity: 0.85; }
+.btn-ghost { background: transparent; color: var(--black); border: 1px solid var(--border); }
+.btn-ghost:hover { border-color: var(--black); }
+
+/* ── Phase Nav — sticky below top nav ── */
+.phase-nav {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 64px;
+  background: var(--bg);
+  z-index: 99;
+  transition: top 0.3s ease;
+}
+.phase-nav.scrolled {
+  top: 44px;
+}
+.phase-nav-inner {
+  max-width: 1400px;
+  padding: 0 48px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.phase-link {
+  padding: 8px 16px;
+  font-size: 13px;
+  color: var(--grey);
+  text-decoration: none;
+  transition: color 0.2s;
+  position: relative;
+}
+.phase-link::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 16px;
+  right: 16px;
+  height: 1px;
+  background: var(--black);
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+.phase-link:hover { color: var(--black); }
+.phase-link.active { color: var(--black); }
+.phase-link.active::after { transform: scaleX(1); }
+
+/* ── Section Styles — Grid spacing ── */
+section { padding: 120px 0; }
+
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+.section-divider::before {
+  display: none;
+}
+.section-divider .section-label {
+  margin-bottom: 0;
+}
+
+.section-label {
+  font-size: 11px; font-weight: 500; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--red); margin-bottom: 24px;
+}
+section h2 {
+  font-family: 'larken', serif; font-size: 48px; font-weight: 400;
+  letter-spacing: -0.02em; margin-bottom: 24px; line-height: 1.1;
+  max-width: 800px;
+}
+.section-desc {
+  font-size: 18px; color: var(--grey); margin-bottom: 60px;
+  line-height: 1.7; max-width: 640px;
+}
+
+/* ── Problem — white bg, no alternating ── */
+.problem { background: var(--bg); }
+
+/* ── Pipeline Interactive Section ── */
+.bridge-section-wrapper { padding: 0 !important; }
+.pipeline-scene {
+  position: relative;
+  padding: 112px 0 40px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.pipeline {
+  margin: 0;
+}
+.pipeline-grid {
+  display: grid;
+  grid-template-columns: 1fr 56px 1fr 56px 1fr;
+  align-items: stretch;
+  gap: 0;
+}
+.pipeline-card {
+  border: 1px solid var(--border);
+  background: #fafafa;
+  overflow: hidden;
+  padding: 0 !important;
+}
+.pipeline-card__image {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  font-size: 0;
+  border: none;
+}
+.pipeline-card__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.pipeline-card__body {
+  padding: 32px;
+}
+.pipeline-card__eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--light);
+  margin-bottom: 10px;
+}
+.pipeline-card__title {
+  font-family: 'larken', serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--black);
+  margin-bottom: 20px;
+  line-height: 1.25;
+}
+.pipeline-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.pipeline-card__list li {
+  font-size: 14px;
+  color: var(--grey);
+  padding: 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: -0.005em;
+  line-height: 1.4;
+}
+.pipeline-card__list li::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background: var(--light);
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+
+/* CE card — the reveal (GSAP-driven) */
+.pipeline-card--ce {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 0 !important;
+  text-align: left;
+}
+.pipeline-card--ce .pipeline-card__body {
+  padding: 32px;
+  border-top: 2px solid var(--red);
+}
+.pipeline-card__eyebrow--red { color: var(--red); }
+.pipeline-card__list--ce li::before { background: var(--red); }
+.pipeline-card__list--ce li { color: var(--black); }
+
+/* Empty gap state */
+.pipeline-gap {
+  position: relative;
+  min-height: 200px;
+}
+.pipeline-gap__empty {
+  position: absolute;
+  inset: 0;
+  border: 1px dashed var(--border);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+.pipeline-gap__label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--light);
+}
+
+/* Connectors */
+.pipeline-connector {
+  width: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pipeline-connector__line {
+  width: 100%;
+  height: 2px;
+  background: var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.pipeline-connector__line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--red);
+  transform: scaleX(var(--connector-progress, 0));
+  transform-origin: left;
+}
+
+/* Pipeline status */
+.pipeline-status {
+  text-align: center;
+  margin-top: 28px;
+}
+.pipeline-status__text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  color: var(--black);
+}
+
+/* Bridge explainer */
+.bridge-explainer {
+  max-width: 640px;
+  margin: 48px auto 0;
+  text-align: center;
+}
+.bridge-explainer p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--grey);
+  letter-spacing: -0.005em;
+}
+
+/* ── Operators ── */
+.operators {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-bottom: 60px;
+}
+.operator-photo {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 24px;
+}
+.operator h3 {
+  font-family: 'larken', Georgia, serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.operator .role {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 12px;
+}
+.operator p {
+  font-size: 14px;
+  color: var(--grey);
+  line-height: 1.7;
+}
+
+/* ── Deliverables — Horizontal Scroll ── */
+.deliverables-scroll-wrapper {
+  height: 500vh;
+  position: relative;
+}
+.deliverables-scroll-sticky {
+  position: sticky;
+  top: 112px;
+  height: calc(100vh - 112px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 0;
+}
+#deliverables {
+  padding: 0;
+}
+.deliverables-scroll-header {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto 32px;
+  padding: 0 48px;
+}
+.deliverables-scroll-track {
+  display: flex;
+  gap: 32px;
+  padding-left: max(48px, calc((100vw - 1400px) / 2 + 48px));
+  padding-right: 48px;
+  will-change: transform;
+}
+.deliverable-card {
+  flex-shrink: 0;
+  width: 400px;
+  background: #fafafa;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.deliverable-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  line-height: 0;
+}
+.deliverable-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.deliverable-card h3 {
+  font-family: 'larken', serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--black);
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+  padding: 24px 28px 0;
+}
+.deliverable-card p {
+  font-size: 13px;
+  color: var(--grey);
+  line-height: 1.5;
+  padding: 0 28px;
+}
+.deliverable-card .outcome-callout {
+  font-size: 12px;
+  color: var(--red);
+  display: block;
+  padding: 12px 28px 28px;
+  margin-top: auto;
+  font-style: normal;
+}
+.deliverables-progress {
+  display: flex;
+  gap: 8px;
+  margin-top: 24px;
+  padding-left: max(48px, calc((100vw - 1400px) / 2 + 48px));
+}
+.deliverables-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--border);
+  transition: background 200ms ease, width 200ms ease;
+}
+.deliverables-dot.is-active {
+  background: var(--red);
+  width: 20px;
+}
+
+/* ── The Engine (two-column) ── */
+.engine-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.engine-grid h2 {
+  font-family: 'larken', serif;
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--black);
+  line-height: 1.2;
+}
+.engine-body {
+  font-size: 15px;
+  color: var(--grey);
+  line-height: 1.7;
+}
+.engine-body strong {
+  font-weight: 500;
+  color: var(--black);
+}
+
+/* ── Pipeline Walkthrough ── */
+.pipeline-walkthrough {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.pipeline-step {
+  display: grid;
+  grid-template-columns: 48px 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+.pipeline-step-number {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--red);
+  padding-top: 4px;
+}
+.pipeline-step-content h3 {
+  font-family: 'larken', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--black);
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+.pipeline-step-content p {
+  font-size: 14px;
+  color: var(--grey);
+  line-height: 1.6;
+  max-width: 400px;
+}
+.pipeline-step-image {
+  border: 1px solid var(--border);
+  overflow: hidden;
+  line-height: 0;
+}
+.pipeline-step-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Team Grid ── */
+.team { background: var(--bg); }
+/* ── AI Specialists Strip ── */
+.ai-strip {
+  margin-top: 48px;
+}
+.ai-strip-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--light);
+  margin-bottom: 20px;
+}
+.ai-strip-row {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+.ai-agent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+.ai-agent img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.ai-agent-name {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--black);
+  letter-spacing: -0.01em;
+}
+.ai-agent-role {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--light);
+}
+
+/* ── Embed / Work ── */
+.embed-container {
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.embed-container iframe {
+  width: 100%;
+  height: 700px;
+  border: none;
+  display: block;
+}
+
+/* ── Business Case ── */
+.business-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+}
+.business-value {
+  padding: 32px;
+  border: 1px solid var(--border);
+  background: #fafafa;
+}
+.business-value-title {
+  font-family: 'larken', serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.business-value-desc {
+  font-size: 14px;
+  color: var(--grey);
+  line-height: 1.7;
+}
+
+/* ── Investment Section ── */
+.investment { background: var(--bg); }
+
+/* ── FAQ — Grid-style accordion ── */
+.faq { background: var(--bg); }
+.faq-list { max-width: 800px; }
+.faq-item {
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+  cursor: pointer;
+}
+.faq-item:last-child { border-bottom: 1px solid var(--border); }
+.faq-question {
+  font-family: 'larken', serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-answer { font-size: 14px; color: var(--grey); line-height: 1.7; }
+
+/* ── CTA — Grid style ── */
+.cta { background: var(--bg); text-align: center; padding: 120px 0; }
+.cta h2 {
+  font-family: 'larken', serif;
+  font-size: 48px;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+.cta h2 em { font-style: normal; color: var(--red); }
+.cta-desc { font-size: 18px; color: var(--grey); margin-bottom: 48px; line-height: 1.7; }
+
+/* ── Footer ── */
+footer { padding: 40px 48px; border-top: 1px solid var(--border); }
+.footer-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 12px; color: var(--grey);
+}
+.footer-brand { font-weight: 500; color: var(--black); }
+
+/* ── Responsive ──
+   Hero responsive behavior lives inside /components/ce-hero/ce-hero.css */
+
+@media (max-width: 768px) {
+  .container { padding: 0 24px; }
+  .nav-inner { padding: 0 24px; }
+  section { padding: 72px 0; }
+  .engine-grid { grid-template-columns: 1fr; gap: 24px; }
+  .pipeline-step { grid-template-columns: 32px 1fr; }
+  .pipeline-step-image { grid-column: 1 / -1; }
+  .opportunity-layout { grid-template-columns: 1fr; }
+  .opportunity-visual { aspect-ratio: 16 / 9; }
+  .phase-nav-inner { padding: 0 24px; }
+  .phase-link { padding: 6px 10px; font-size: 12px; }
+
+
+  section h2 { font-size: 32px; }
+  .section-desc { font-size: 16px; }
+
+  .operators { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .deliverables-scroll-wrapper { height: auto; }
+  .deliverables-scroll-sticky { position: relative; height: auto; }
+  .deliverables-scroll-track { overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; transform: none !important; padding: 0 24px; }
+  .deliverable-card { width: 85vw; min-width: 300px; scroll-snap-align: start; }
+  .deliverables-scroll-header { padding: 0 24px; }
+  .deliverables-progress { display: none; }
+  .ai-strip-row { flex-wrap: wrap; gap: 24px; }
+  .business-values { grid-template-columns: 1fr; gap: 24px; }
+  .embed-container iframe { height: 450px; }
+
+  .burger-menu { right: 24px; }
+
+  /* Pipeline responsive */
+  .pipeline-scene { padding: 0; }
+  .pipeline-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .pipeline-connector {
+    width: 100%;
+    height: 40px;
+  }
+  .pipeline-connector__line {
+    width: 0;
+    height: 100%;
+    border-top: none;
+    border-left: 1px solid var(--border);
+  }
+  .pipeline-connector__line::after {
+    width: 0;
+    height: 100%;
+    border-top: none;
+    border-left: 2px solid var(--red);
+    top: 0;
+    transform: scaleY(var(--connector-progress, 0));
+    transform-origin: top;
+  }
+  .pipeline-gap { min-height: 180px; }
+  .pipeline-card { padding: 24px; }
+  .pipeline-card__title { font-size: 16px; }
+
+  .footer-inner { flex-direction: column; gap: 12px; text-align: center; }
+  footer { padding: 40px 24px; }
+  .hero-actions { flex-direction: column; width: 100%; }
+  .btn { width: 100%; justify-content: center; }
+
+  .cta { padding: 72px 0; }
+  .cta h2 { font-size: 32px; }
+  .cta-desc { font-size: 16px; }
+}
+
+@media (max-width: 480px) {
+  .deliverable-card { width: 90vw; }
+  .ai-strip-row { gap: 16px; }
+}
+
+/* ── Scroll Reveal — Grid-style cubic-bezier ── */
+[data-anim] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+[data-anim].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+[data-anim="hero"] { transition-delay: 0s; }
+[data-anim="hero"]:nth-child(2) { transition-delay: 0.1s; }
+[data-anim="hero"]:nth-child(3) { transition-delay: 0.2s; }
+[data-anim="hero"]:nth-child(4) { transition-delay: 0.3s; }
+[data-anim="stagger-team"].visible { transition-delay: calc(var(--i, 0) * 0.06s); }
+[data-anim="stagger-faq"].visible { transition-delay: calc(var(--i, 0) * 0.08s); }
+[data-anim="stagger-deliver"].visible { transition-delay: calc(var(--i, 0) * 0.06s); }
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  [data-anim] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .scroll-line::after {
+    animation: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Nav — Grid-style burger -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <img src="/assets/logos/ce-logo-red.png" alt="Curious Endeavor" />
+    </div>
+  </div>
+</nav>
+
+<!-- ════════════════════════════════════════════
+     1. HERO — uses shared ce-hero component
+     ════════════════════════════════════════════ -->
+<section class="ce-hero"
+         data-hero-title='Your creative department,<br>minus the <em>department</em>.'
+         data-hero-subtitle="Strategy to execution. Faster than hiring. Cheaper than agencies."
+         data-hero-pool="default">
+</section>
+
+<!-- Phase Nav — sticky section navigation -->
+<div class="phase-nav">
+  <div class="phase-nav-inner">
+    <a href="#problem" class="phase-link active">Problem</a>
+    <a href="#solution" class="phase-link">Solution</a>
+    <a href="#how-it-works" class="phase-link">How It Works</a>
+    <a href="#deliverables" class="phase-link">Deliverables</a>
+    <a href="#deliverables" class="phase-link">Deliverables</a>
+    <a href="#market" class="phase-link">Market</a>
+    <a href="#traction" class="phase-link">Traction</a>
+    <a href="#team" class="phase-link">Team</a>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     2. THE PROBLEM
+     ════════════════════════════════════════════ -->
+<section id="problem" class="problem">
+  <div class="container">
+    <div class="section-divider" data-anim="scroll"><span class="section-label">The Problem</span></div>
+    <h2 data-anim="scroll">Production barriers kill great brands before launch.</h2>
+    <p class="section-desc" data-anim="scroll">Great ideas die in production. Campaigns drain budgets, eat time, and kill momentum.</p>
+
+    <div class="business-values">
+      <div class="business-value" data-anim="scroll">
+        <i data-lucide="dollar-sign" style="width:20px;height:20px;stroke:var(--red);stroke-width:1.5;margin-bottom:12px;display:block;"></i>
+        <div class="business-value-title">Production Costs</div>
+        <div class="business-value-desc">Agency retainers consume a significant share of marketing budgets before a single customer converts.</div>
+      </div>
+      <div class="business-value" data-anim="scroll">
+        <i data-lucide="clock" style="width:20px;height:20px;stroke:var(--red);stroke-width:1.5;margin-bottom:12px;display:block;"></i>
+        <div class="business-value-title">Execution Speed</div>
+        <div class="business-value-desc">Traditional creative takes 6–12 weeks. Markets move faster.</div>
+      </div>
+      <div class="business-value" data-anim="scroll">
+        <i data-lucide="globe" style="width:20px;height:20px;stroke:var(--red);stroke-width:1.5;margin-bottom:12px;display:block;"></i>
+        <div class="business-value-title">Global Scaling</div>
+        <div class="business-value-desc">Multi-market campaigns need local teams. Coordination kills speed.</div>
+      </div>
+      <div class="business-value" data-anim="scroll">
+        <i data-lucide="alert-triangle" style="width:20px;height:20px;stroke:var(--red);stroke-width:1.5;margin-bottom:12px;display:block;"></i>
+        <div class="business-value-title">Quality Control</div>
+        <div class="business-value-desc">Freelancers deliver inconsistent work. Agencies assign junior talent.</div>
+      </div>
+      <div class="business-value" data-anim="scroll">
+        <i data-lucide="layers" style="width:20px;height:20px;stroke:var(--red);stroke-width:1.5;margin-bottom:12px;display:block;"></i>
+        <div class="business-value-title">Content Volume</div>
+        <div class="business-value-desc">Modern brands need dozens of assets per campaign. Manual creation doesn't scale.</div>
+      </div>
+      <div class="business-value" data-anim="scroll">
+        <i data-lucide="link-2-off" style="width:20px;height:20px;stroke:var(--red);stroke-width:1.5;margin-bottom:12px;display:block;"></i>
+        <div class="business-value-title">External Dependencies</div>
+        <div class="business-value-desc">Outside teams don't understand your product. Revisions multiply.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     3. THE SOLUTION
+     ════════════════════════════════════════════ -->
+<section id="solution">
+  <div class="container">
+    <div class="section-divider" data-anim="scroll"><span class="section-label">The Solution</span></div>
+    <h2 data-anim="scroll">CE solves every one of these. Simultaneously.</h2>
+    <p class="section-desc" data-anim="scroll">One system. Eight AI specialists. Strategy to assets at a fraction of agency retainers.</p>
+
+    <div class="business-values">
+      <div class="business-value" data-anim="scroll">
+        <i data-lucide="tag" style="width:20px;height:20px;stroke:var(--red);stroke-width:1.5;margin-bottom:12px;display:block;"></i>
+        <div class="business-value-title">Fixed Pricing</div>
+        <div class="business-value-desc">Predictable monthly cost. No retainers, no scope creep, no surprise bills.</div>
+      </div>
+      <div class="business-value" data-anim="scroll">
+        <i data-lucide="zap" style="width:20px;height:20px;stroke:var(--red);stroke-width:1.5;margin-bottom:12px;display:block;"></i>
+        <div class="business-value-title">Rapid Delivery</div>
+        <div class="business-value-desc">Complete campaigns in days. Assets delivered production-ready.</div>
+      </div>
+      <div class="business-value" data-anim="scroll">
+        <i data-lucide="map-pin" style="width:20px;height:20px;stroke:var(--red);stroke-width:1.5;margin-bottom:12px;display:block;"></i>
+        <div class="business-value-title">Multi-Market Ready</div>
+        <div class="business-value-desc">Localized copy and visuals for any geography. Native-level execution.</div>
+      </div>
+      <div class="business-value" data-anim="scroll">
+        <i data-lucide="shield-check" style="width:20px;height:20px;stroke:var(--red);stroke-width:1.5;margin-bottom:12px;display:block;"></i>
+        <div class="business-value-title">Consistent Standards</div>
+        <div class="business-value-desc">Same quality every time. AI specialists trained on your brand.</div>
+      </div>
+      <div class="business-value" data-anim="scroll">
+        <i data-lucide="trending-up" style="width:20px;height:20px;stroke:var(--red);stroke-width:1.5;margin-bottom:12px;display:block;"></i>
+        <div class="business-value-title">Scalable Production</div>
+        <div class="business-value-desc">High-volume output. Quality stays constant at scale.</div>
+      </div>
+      <div class="business-value" data-anim="scroll">
+        <i data-lucide="lock" style="width:20px;height:20px;stroke:var(--red);stroke-width:1.5;margin-bottom:12px;display:block;"></i>
+        <div class="business-value-title">Internal Control</div>
+        <div class="business-value-desc">Your team owns everything. Direct feedback, instant iterations.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     4. HOW IT WORKS
+     ════════════════════════════════════════════ -->
+<section id="how-it-works">
+  <div class="container">
+    <div class="section-divider" data-anim="scroll"><span class="section-label">How It Works</span></div>
+    <h2 data-anim="scroll">Four core capabilities. One production engine.</h2>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 80px;" data-anim="scroll">
+      <div style="display: flex; gap: 28px; align-items: flex-start;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500; color: var(--red); padding-top: 6px; flex-shrink: 0;">01</div>
+        <div>
+          <h3 style="font-family: 'larken', serif; font-size: 22px; font-weight: 400; letter-spacing: -0.02em; margin-bottom: 10px; line-height: 1.25;">The agentic agency model</h3>
+          <p style="font-size: 14px; color: var(--grey); line-height: 1.7;">AI specialists handle strategy, creative, and production. No human bottlenecks.</p>
+        </div>
+      </div>
+      <div style="display: flex; gap: 28px; align-items: flex-start;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500; color: var(--red); padding-top: 6px; flex-shrink: 0;">02</div>
+        <div>
+          <h3 style="font-family: 'larken', serif; font-size: 22px; font-weight: 400; letter-spacing: -0.02em; margin-bottom: 10px; line-height: 1.25;">You own everything</h3>
+          <p style="font-size: 14px; color: var(--grey); line-height: 1.7;">Files, source code, brand assets transfer to you. No vendor lock-in.</p>
+        </div>
+      </div>
+      <div style="display: flex; gap: 28px; align-items: flex-start;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500; color: var(--red); padding-top: 6px; flex-shrink: 0;">03</div>
+        <div>
+          <h3 style="font-family: 'larken', serif; font-size: 22px; font-weight: 400; letter-spacing: -0.02em; margin-bottom: 10px; line-height: 1.25;">Production-ready output</h3>
+          <p style="font-size: 14px; color: var(--grey); line-height: 1.7;">Print files, web assets, exports delivered final. No technical cleanup needed.</p>
+        </div>
+      </div>
+      <div style="display: flex; gap: 28px; align-items: flex-start;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500; color: var(--red); padding-top: 6px; flex-shrink: 0;">04</div>
+        <div>
+          <h3 style="font-family: 'larken', serif; font-size: 22px; font-weight: 400; letter-spacing: -0.02em; margin-bottom: 10px; line-height: 1.25;">Any scale, any stage</h3>
+          <p style="font-size: 14px; color: var(--grey); line-height: 1.7;">Startup launch or Fortune 500 rebrand. Same system, different scope.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     5. DELIVERABLES — Horizontal Scroll
+     ════════════════════════════════════════════ -->
+<section id="deliverables">
+  <div class="deliverables-scroll-wrapper" id="deliverablesWrapper">
+    <div class="deliverables-scroll-sticky">
+      <div class="deliverables-scroll-header">
+        <div class="section-divider"><span class="section-label">Deliverables</span></div>
+        <h2>What the system produces</h2>
+        <p class="section-desc">Complete production stack delivered. Strategy brief to final files.</p>
+      </div>
+
+      <div class="deliverables-scroll-track" id="deliverablesTrack">
+        <div class="deliverable-card">
+          <div class="deliverable-image">
+            <img src="/assets/deck/strategy-brief.png" alt="Strategy Brief">
+          </div>
+          <h3>Strategy Brief</h3>
+          <p>Market positioning, competitive analysis, messaging hierarchy. Foundation for all creative.</p>
+        </div>
+
+        <div class="deliverable-card">
+          <div class="deliverable-image">
+            <img src="/assets/deck/campaign-architecture.png" alt="Campaign Architecture">
+          </div>
+          <h3>Campaign Architecture</h3>
+          <p>Creative concept, visual system, content framework. Blueprint for execution.</p>
+        </div>
+
+        <div class="deliverable-card">
+          <div class="deliverable-image">
+            <img src="/assets/deck/production-assets.png" alt="Production-Ready Assets">
+          </div>
+          <h3>Production-Ready Assets</h3>
+          <p>Print files, web exports, video renders. Ready for deployment without technical work.</p>
+        </div>
+
+        <div class="deliverable-card">
+          <div class="deliverable-image">
+            <img src="/assets/deck/localization.png" alt="Multi-Market Localization">
+          </div>
+          <h3>Multi-Market Localization</h3>
+          <p>Native copy and cultural adaptation for target geographies. Regional teams not required.</p>
+        </div>
+
+        <div class="deliverable-card">
+          <div class="deliverable-image">
+            <img src="/assets/deck/execution-playbook.png" alt="Execution Playbook">
+          </div>
+          <h3>Execution Playbook</h3>
+          <p>Channel strategy, timing, distribution plan. Implementation roadmap included.</p>
+        </div>
+      </div>
+
+      <div class="deliverables-progress" id="deliverablesProgress">
+        <div class="deliverables-dot is-active"></div>
+        <div class="deliverables-dot"></div>
+        <div class="deliverables-dot"></div>
+        <div class="deliverables-dot"></div>
+        <div class="deliverables-dot"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     6. THE MARKET
+     ════════════════════════════════════════════ -->
+<section id="market">
+  <div class="container">
+    <div class="section-divider" data-anim="scroll"><span class="section-label">The Market</span></div>
+    <h2 data-anim="scroll">$444B problem we're solving.</h2>
+    <p class="section-desc" data-anim="scroll">Global agency market proves the pain is real. Companies pay billions for slow, expensive creative.</p>
+
+    <!-- 3 big stats -->
+    <div class="business-values" style="margin-bottom: 64px;" data-anim="scroll">
+      <div class="business-value">
+        <div style="font-family: 'larken', serif; font-size: 48px; font-weight: 400; letter-spacing: -0.03em; color: var(--red); margin-bottom: 8px;">$444B</div>
+        <div class="business-value-title">Global agency market</div>
+        <div class="business-value-desc">The entire market is up for grabs. AI-native operations will own the next decade of it. <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--light);">(IBISWorld, 2025)</span></div>
+      </div>
+      <div class="business-value">
+        <div style="font-family: 'larken', serif; font-size: 48px; font-weight: 400; letter-spacing: -0.03em; color: var(--red); margin-bottom: 8px;">40–50%</div>
+        <div class="business-value-title">Production cost reduction</div>
+        <div class="business-value-desc">AI adoption drives 40–50% reduction in production costs. <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--light);">(Forrester, Jun 2025)</span></div>
+      </div>
+      <div class="business-value">
+        <div style="font-family: 'larken', serif; font-size: 48px; font-weight: 400; letter-spacing: -0.03em; color: var(--red); margin-bottom: 8px;">30–40%</div>
+        <div class="business-value-title">Of routine agency tasks show high automation potential <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--light); font-weight: 400;">(Forrester / McKinsey, 2024)</span></div>
+        <div class="business-value-desc">CE automates production, maintains quality.</div>
+      </div>
+    </div>
+
+    <!-- displacement stat — full width -->
+    <div data-anim="scroll" style="margin-top: 80px; padding: 64px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); text-align: center;">
+      <div style="font-family: 'larken', serif; font-size: 48px; font-weight: 400; letter-spacing: -0.03em; color: var(--red); line-height: 1;">15–20%</div>
+      <div style="font-family: 'larken', serif; font-size: 18px; font-weight: 400; color: var(--black); margin-top: 12px; letter-spacing: -0.02em;">of brand creative spend has already migrated to AI-native providers.</div>
+      <div style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--grey); margin-top: 8px; line-height: 1.7;">CE is positioned at the front of that wave. <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--light);">(CE Estimate, 2026)</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     6. TRACTION
+     ════════════════════════════════════════════ -->
+<section id="traction">
+  <div class="container">
+    <div class="section-divider" data-anim="scroll"><span class="section-label">Traction</span></div>
+    <h2 data-anim="scroll">Already working. Ready to scale.</h2>
+
+    <div class="business-values">
+      <div class="business-value" data-anim="scroll" style="padding: 0; overflow: hidden;">
+        <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; line-height: 0;">
+          <img src="/assets/deck/work-olevia.jpg" alt="Olevia — Brand Identity" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </div>
+        <div style="padding: 28px 32px 32px;">
+          <div class="business-value-title">Olevia</div>
+          <div class="business-value-desc">Complete brand transformation in 6 weeks. Revenue generating, investment ready.</div>
+        </div>
+      </div>
+      <div class="business-value" data-anim="scroll" style="padding: 0; overflow: hidden;">
+        <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; line-height: 0;">
+          <img src="/assets/deck/work-finally-foods.jpg" alt="Finally Foods — brand strategy and website" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </div>
+        <div style="padding: 28px 32px 32px;">
+          <div class="business-value-title">Finally Foods</div>
+          <div class="business-value-desc">Full brand strategy, branding, visual production and website development.</div>
+        </div>
+      </div>
+      <div class="business-value" data-anim="scroll" style="padding: 0; overflow: hidden;">
+        <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; line-height: 0;">
+          <img src="/assets/deck/work-day8.jpg" alt="Day8 — brand strategy and investment communication" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </div>
+        <div style="padding: 28px 32px 32px;">
+          <div class="business-value-title">Day8</div>
+          <div class="business-value-desc">Full brand strategy, branding, visual production and investment communication strategy.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     7. WHO WE ARE
+     ════════════════════════════════════════════ -->
+<section id="team" class="team">
+  <div class="container">
+    <div class="section-divider" data-anim="scroll"><span class="section-label">Who We Are</span></div>
+    <h2 data-anim="scroll">Four operators who built this. Eight AI specialists who run it.</h2>
+    <p class="section-desc" data-anim="scroll">Founders scaled brands from presidential campaigns to public companies. Every AI specialist trained by us.</p>
+
+    <!-- 4 Operators -->
+    <div class="operators">
+      <div class="operator" data-anim="scroll">
+        <img src="/assets/team/assaf.png" alt="Assaf Dagan" class="operator-photo">
+        <h3>Assaf Dagan</h3>
+        <div class="role">Strategy & Creative</div>
+        <p>I've spent my career where the budget was big and the stakes were real — presidential campaigns, Fortune 500 repositions, startups burning runway. Brand isn't decoration. It's the difference between a company people remember and one they don't.</p>
+      </div>
+      <div class="operator" data-anim="scroll">
+        <img src="/assets/team/lukas.png" alt="Lukas Richthammer" class="operator-photo">
+        <h3>Lukas Richthammer</h3>
+        <div class="role">Business Development</div>
+        <p>I've spent years inside enterprise SaaS watching companies onboard, pull great data, then stall on growth. I built CE's go-to-market around that exact gap — I know where conversion breaks and what it takes to fix it.</p>
+      </div>
+      <div class="operator" data-anim="scroll">
+        <img src="/assets/team/dan.jpg" alt="Dan Peguine" class="operator-photo">
+        <h3>Dan Peguine</h3>
+        <div class="role">Agent Architect</div>
+        <p>I've built products that reached hundreds of millions and led marketing for companies moving fast. When agentic AI emerged, I went all in — featured in WIRED and The Telegraph, trusted by the builders. Now I design agent systems that actually work in production.</p>
+      </div>
+      <div class="operator" data-anim="scroll">
+        <img src="/assets/team/felipe.png" alt="Felipe Stark" class="operator-photo">
+        <h3>Felipe Stark</h3>
+        <div class="role">AI Systems & Engineering</div>
+        <p>I've founded and built companies from zero — writing code, designing systems, shipping under pressure. When agentic AI arrived, I went all in. Now I architect the infrastructure that runs CE's entire production pipeline.</p>
+      </div>
+    </div>
+
+    <!-- 8 AI Specialists — compact strip -->
+    <div class="ai-strip" data-anim="scroll">
+      <div class="ai-strip-label">8 AI specialists</div>
+      <div class="ai-strip-row">
+        <div class="ai-agent">
+          <img src="/assets/team/kitt.png" alt="Kitt" />
+          <span class="ai-agent-name">Kitt</span>
+          <span class="ai-agent-role">Strategy</span>
+        </div>
+        <div class="ai-agent">
+          <img src="/assets/team/gerri.png" alt="Gerri" />
+          <span class="ai-agent-name">Gerri</span>
+          <span class="ai-agent-role">Operations</span>
+        </div>
+        <div class="ai-agent">
+          <img src="/assets/team/ogilvy.png" alt="Ogilvy" />
+          <span class="ai-agent-name">Ogilvy</span>
+          <span class="ai-agent-role">Copy</span>
+        </div>
+        <div class="ai-agent">
+          <img src="/assets/team/tatiana.png" alt="Tatiana" />
+          <span class="ai-agent-name">Tatiana</span>
+          <span class="ai-agent-role">Visual</span>
+        </div>
+        <div class="ai-agent">
+          <img src="/assets/team/anton.png" alt="Anton" />
+          <span class="ai-agent-name">Anton</span>
+          <span class="ai-agent-role">QA</span>
+        </div>
+        <div class="ai-agent">
+          <img src="/assets/team/julia.png" alt="Julia" />
+          <span class="ai-agent-name">Julia</span>
+          <span class="ai-agent-role">Research</span>
+        </div>
+        <div class="ai-agent">
+          <img src="/assets/team/jessica.jpg" alt="Jessica" />
+          <span class="ai-agent-name">Jessica</span>
+          <span class="ai-agent-role">Design</span>
+        </div>
+        <div class="ai-agent">
+          <img src="/assets/team/thibault.png" alt="Thibault" />
+          <span class="ai-agent-name">Thibault</span>
+          <span class="ai-agent-role">Engineering</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-brand">Curious Endeavor</span>
+    <span>Lisbon · Vienna · Berlin</span>
+    <a href="mailto:assaf@curiousendeavor.com" style="color: var(--grey); text-decoration: none;">assaf@curiousendeavor.com</a>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+// ── Nav shrink on scroll ──
+let lastScrollY = window.pageYOffset;
+const nav = document.querySelector('nav');
+const phaseNav = document.querySelector('.phase-nav');
+
+window.addEventListener('scroll', () => {
+  const currentScrollY = window.pageYOffset;
+  
+  if (currentScrollY > 100) {
+    nav.classList.add('scrolled');
+    phaseNav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+    phaseNav.classList.remove('scrolled');
+  }
+  
+  lastScrollY = currentScrollY;
+});
+
+// ── Phase nav — highlight active section ──
+const phaseLinks = document.querySelectorAll('.phase-link');
+const sections = document.querySelectorAll('section[id]');
+
+function setActivePhaseLink() {
+  let currentSection = '';
+  
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    const offset = nav.offsetHeight + phaseNav.offsetHeight + 50;
+    
+    if (rect.top <= offset && rect.bottom > offset) {
+      currentSection = section.id;
+    }
+  });
+  
+  phaseLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${currentSection}`) {
+      link.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', setActivePhaseLink);
+
+// ── Scroll reveal animation ──
+const animElements = document.querySelectorAll('[data-anim]');
+
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, {
+  threshold: 0.1,
+  rootMargin: '0px 0px -10% 0px'
+});
+
+animElements.forEach(el => revealObserver.observe(el));
+
+// ── Smooth scroll for phase nav links ──
+phaseLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const targetId = link.getAttribute('href').substring(1);
+    const targetEl = document.getElementById(targetId);
+    
+    if (targetEl) {
+      const offset = nav.offsetHeight + phaseNav.offsetHeight;
+      const targetPosition = targetEl.offsetTop - offset;
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+// ── Set initial active link ──
+setTimeout(setActivePhaseLink, 100);
+
+// ── Deliverables horizontal scroll ──
+(function() {
+  'use strict';
+  var wrapper = document.getElementById('deliverablesWrapper');
+  var track = document.getElementById('deliverablesTrack');
+  var progress = document.getElementById('deliverablesProgress');
+  if (!wrapper || !track) return;
+
+  var dots = progress ? progress.querySelectorAll('.deliverables-dot') : [];
+  var cards = track.querySelectorAll('.deliverable-card');
+  var totalCards = cards.length;
+
+  /* Skip on mobile — native horizontal scroll instead */
+  if (window.innerWidth <= 1024) return;
+
+  /* Respect reduced motion */
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    wrapper.style.height = 'auto';
+    var sticky = wrapper.querySelector('.deliverables-scroll-sticky');
+    if (sticky) sticky.style.position = 'relative';
+    track.style.overflowX = 'auto';
+    return;
+  }
+
+  function onScroll() {
+    var rect = wrapper.getBoundingClientRect();
+    var wrapperTop = -rect.top;
+    var scrollRange = wrapper.offsetHeight - window.innerHeight;
+
+    if (wrapperTop < 0) wrapperTop = 0;
+    if (wrapperTop > scrollRange) wrapperTop = scrollRange;
+
+    var p = wrapperTop / scrollRange;
+    /* Stop so last card aligns with container left edge */
+    var containerPadding = (window.innerWidth - 1400) / 2 + 48;
+    if (containerPadding < 48) containerPadding = 48;
+    var totalTrackWidth = track.scrollWidth - window.innerWidth + containerPadding;
+    var translateX = p * totalTrackWidth;
+
+    track.style.transform = 'translateX(-' + translateX + 'px)';
+
+    /* Update dots */
+    var activeIndex = Math.round(p * (totalCards - 1));
+    for (var i = 0; i < dots.length; i++) {
+      if (i === activeIndex) {
+        dots[i].classList.add('is-active');
+      } else {
+        dots[i].classList.remove('is-active');
+      }
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
+
+<script>lucide.createIcons();</script>
+
+<!-- Shared ce-hero component script — replaces the old bespoke crossfade loop -->
+<script src="/components/ce-hero/ce-hero.js" defer></script>
+</body>
+</html>
