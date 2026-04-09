@@ -17,10 +17,10 @@
    4. Has a `<section class="ce-hero">` but doesn't import
       `/components/ce-hero/ce-hero.css` and `.js`.
 
-   WORDMARK RULES
-   5. Contains "curious endeavor." as rendered text (not inside
-      <!-- comment -->, <title>, alt="", or aria-label="") —
-      must be an <img> pointing at the canonical PNG.
+   WORDMARK RULES (refined 2026-04-09)
+   5. Inside a <nav> or .nav-brand element, the wordmark must be the
+      canonical PNG — not rendered text. Outside nav (e.g. inside
+      a .ce-hero-text-cell) live text is fine and expected.
    6. Has <img> referencing a non-canonical CE logo path.
       Canonical: /assets/logos/ce-logo-red.png
 
@@ -147,21 +147,28 @@ async function checkFile(fileRel) {
     }
   }
 
-  /* Rule 5: Literal "curious endeavor." wordmark as rendered text (the styled logo).
-     Only flag when it appears inside a .hero-logo / .ce-hero-title / .logo class — i.e.,
-     a styled wordmark. Plain body text mentioning the company name (legal, footer, etc.)
-     is fine; the rule is about the WORDMARK treatment, not every mention. */
+  /* Rule 5 (refined): Nav / brand mark must use the canonical PNG.
+     - Inside <nav>...</nav> or an element with class "nav-brand" / "brand-mark",
+       the wordmark must be an <img> — rendered text is a violation.
+     - Live text "curious endeavor." anywhere else (hero text cells, footers, body)
+       is expected and not flagged. */
   if (!isComponentFile) {
-    const scrubbed = stripMetaText(html);
-    /* Match a styled wordmark: element with a logo class containing "curious endeavor" as text */
-    const logoElementRe =
-      /<(span|h1|h2|div)[^>]*\bclass\s*=\s*["'][^"']*(hero-logo|hero-text-logo|ce-hero-title|wordmark|brand-logo|logo)\b[^"']*["'][^>]*>([\s\S]{0,200}?)<\/\1>/gi;
-    let em;
-    while ((em = logoElementRe.exec(scrubbed)) !== null) {
-      const inner = em[3];
-      if (/curious\s+endeavor/i.test(inner) && !/<img\b/i.test(inner)) {
+    const navBlocks = [];
+    /* Capture everything inside <nav>...</nav> */
+    const navRe = /<nav[^>]*>([\s\S]*?)<\/nav>/gi;
+    let nm;
+    while ((nm = navRe.exec(html)) !== null) navBlocks.push(nm[1]);
+    /* Capture elements with nav-brand / brand-mark classes */
+    const brandRe = /<(div|span|a)[^>]*\bclass\s*=\s*["'][^"']*\b(nav-brand|brand-mark|site-brand)\b[^"']*["'][^>]*>([\s\S]{0,800}?)<\/\1>/gi;
+    let bm;
+    while ((bm = brandRe.exec(html)) !== null) navBlocks.push(bm[3]);
+
+    for (const block of navBlocks) {
+      /* If the block contains "curious endeavor" as visible text (not inside alt="") → violation */
+      const scrubbed = stripMetaText(block);
+      if (/curious\s+endeavor/i.test(scrubbed) && !/<img\b[^>]*\bsrc\s*=/.test(block)) {
         violations.push(
-          `R5: styled wordmark "${inner.trim().slice(0, 40)}" is rendered text — must be <img src="${CANONICAL_LOGO}"> instead`
+          `R5: nav / brand element contains rendered-text wordmark — nav must use <img src="${CANONICAL_LOGO}">`
         );
         break;
       }

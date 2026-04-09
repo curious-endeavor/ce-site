@@ -6,55 +6,83 @@ New entries go at the top.
 
 ---
 
-## 2026-04-09 — CE wordmark is always the style-guide PNG. No exceptions.
+## 2026-04-09 — CE wordmark: PNG for nav, live text for hero center.
 
-**Rule.** The "curious endeavor." wordmark, wherever it appears, is
-the canonical red PNG from the style guide — never browser-rendered
-text, never a different color, never a different weight, never the
-`--red` CSS variable applied to a font.
+**Rule — refined.** The wordmark has two authorized treatments.
+Pick by context:
 
-**Canonical file:** `site/assets/logos/ce-logo-red.png`
-(1670×160, red serif wordmark, transparent background).
+### Top-left nav / brand mark → canonical PNG
 
-**Why.**
-- **Perfect visual consistency.** Same pixels everywhere, no font
-  fallback flash (Larken loads from Typekit — if it's slow or blocked,
-  users see Georgia until it arrives).
-- **Style guide is the source of truth.** Any text-rendered version
-  is a guess at what the style guide intends. The PNG is what the
-  style guide ships.
-- **Kerning, tracking, weight, optical sizing** all vary between
-  fonts and viewports. The PNG doesn't.
-- **Red is part of the wordmark itself,** not a color applied on top.
-  There is no non-red CE wordmark. Ever.
-
-**How to use it.**
+Use the style-guide PNG whenever the wordmark appears as a small
+top-left brand mark (the thing that says "you're on a CE page" in
+the header of a pitch or landing page).
 
 ```html
-<!-- Anywhere the wordmark appears: nav, hero text cell, footer, OG image -->
-<img src="/assets/logos/ce-logo-red.png"
-     alt="Curious Endeavor"
-     style="height: 1.2em; width: auto;">
+<nav>
+  <div class="nav-brand">
+    <img src="/assets/logos/ce-logo-red.png" alt="Curious Endeavor">
+  </div>
+</nav>
 ```
 
-Size it via `height` in `em` or `px` — `width: auto` preserves the
-aspect ratio. Don't apply `color`, `filter`, `mix-blend-mode`, or
-anything that tints the image.
+Canonical file: `site/assets/logos/ce-logo-red.png` (1670×160,
+transparent background, red serif wordmark).
 
-**Enforcement.** `scripts/check-hero-consistency.mjs` (Layer-4 lint,
-see below) fails any PR that:
+**Why PNG here.** Nav marks are small (~96–120px wide typically),
+pixel-perfect matters, and fonts can look fuzzy at small rendered
+sizes on sub-retina displays. A PNG locks it to exactly what the
+style guide ships.
 
-1. Contains the literal string "curious endeavor." inside an HTML
-   element that renders text, outside of a comment or alt attribute.
-2. References a hero or logo element styled to non-red color
-   (`#000`, `var(--black)`, any non-red color) when the element class
-   includes "hero-logo" or "ce-hero-title" with variant=logo.
-3. Includes an `<img>` for the wordmark pointing at anything other
-   than `/assets/logos/ce-logo-red.png`.
+### Hero center text cell → live text
 
-**Open migration work.** Home page (`/`) and `/figma-story/` on old
-prod still use the text span. They'll be swapped to the PNG as part
-of the home + essay Phase 1 conversions. Tracked in `open-items.md`.
+Use rendered text (Larken serif, red, via CSS) when the wordmark
+appears as the central treatment inside a `.ce-hero` grid text cell
+— the figma-story / Subject Matter Expert pattern.
+
+```html
+<section class="ce-hero"
+         data-hero-variant="logo"
+         data-hero-title="curious endeavor."
+         data-hero-label="Essay · April 2026">
+</section>
+```
+
+The component's `data-hero-variant="logo"` CSS styles the title as
+`clamp(13px, 1.8vw, 22px)` red serif, matching figma-story.
+
+**Why live text here.** Hero center wordmarks scale responsively
+across viewport widths. Font-rendered text gives crisp kerning at
+every size, aligns to the subtitle baseline automatically, and never
+gets stretched awkwardly the way a fixed-aspect PNG does at
+large-cell sizes. We control font weight, letter-spacing, and line-
+height via CSS — the PNG doesn't give us those knobs.
+
+### Color is always red
+
+In both treatments: the wordmark is red. Never black, never white-
+on-dark, never tinted. If a design calls for a dark-mode variant,
+we ship a second PNG (`ce-logo-red-on-dark.png`) — never recolor the
+existing one.
+
+### Never do these
+
+- ❌ Render "curious endeavor." as text in a `<nav>` (use PNG)
+- ❌ Embed the PNG in a `.ce-hero-text-cell` (use live text)
+- ❌ Apply `color`, `filter`, `mix-blend-mode` to the PNG
+- ❌ Use any wordmark asset other than `ce-logo-red.png` under a
+  CE-branded context
+
+### Enforcement
+
+`scripts/check-hero-consistency.mjs` (Layer-4 lint) checks:
+
+- **R5** (nav must use PNG) — if a `<nav>` or `.nav-brand` element
+  contains the literal text "curious endeavor" outside an `<img>`
+  alt attribute, fail.
+- **R6** (wordmark img must be canonical) — any `<img>` whose src
+  contains `ce-logo` or `logo-red` must point to
+  `/assets/logos/ce-logo-red.png` (or the transitional old-repo
+  path `/assets/ce-logo-red.png`). Fail otherwise.
 
 ---
 
