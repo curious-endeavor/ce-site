@@ -155,19 +155,34 @@
   }
 }
 
-/* ── Phone — brick-wall layout (ported from Subject Matter Expert) ── */
-@media (max-width: 540px) {
+/* ── Mobile / small tablet — brick-wall layout (ported from Subject Matter Expert).
+      Breakpoint is 768px so it catches portrait phones (375-430),
+      landscape phones (600-930), and portrait iPad mini (768).
+      Row height scales with viewport so cells don't look squished at any width. ── */
+@media (max-width: 768px) {
   .ce-hero {
     height: auto;
     min-height: 0;
   }
   .ce-hero-grid {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
     width: 100%;
+    height: auto;
     min-height: 0;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 100px 100px 100px auto 100px 100px 100px;
-    gap: 6px;
-    padding: 6px;
+    grid-template-rows:
+      clamp(100px, 18vw, 160px)
+      clamp(100px, 18vw, 160px)
+      clamp(100px, 18vw, 160px)
+      auto
+      clamp(100px, 18vw, 160px)
+      clamp(100px, 18vw, 160px)
+      clamp(100px, 18vw, 160px);
+    gap: clamp(6px, 1vw, 12px);
+    padding: clamp(6px, 1vw, 12px);
   }
   .ce-hero-cell { border-radius: 3px; }
   /* Top block — interlocking brick pattern */
@@ -179,11 +194,11 @@
   .ce-hero-text-cell {
     grid-column: 1 / -1;
     grid-row: 4 / 5;
-    padding: 28px 16px;
+    padding: clamp(24px, 5vw, 40px) clamp(16px, 4vw, 32px);
   }
-  .ce-hero-title { font-size: 20px; }
-  .ce-hero[data-hero-variant="logo"] .ce-hero-title { font-size: 18px; }
-  .ce-hero-subtitle { font-size: 12px; max-width: none; }
+  .ce-hero-title { font-size: clamp(18px, 3.5vw, 24px); }
+  .ce-hero[data-hero-variant="logo"] .ce-hero-title { font-size: clamp(16px, 3vw, 22px); }
+  .ce-hero-subtitle { font-size: clamp(12px, 2vw, 14px); max-width: none; }
   /* Bottom block — mirror the brick */
   .ce-hero-cell.is-img:nth-child(6) { grid-column: 1; grid-row: 5 / 6; }
   .ce-hero-cell.is-img:nth-child(7) { grid-column: 2; grid-row: 5 / 7; }
