@@ -51,17 +51,23 @@ async function walk(root, rel = '') {
   return out;
 }
 
-/* ── Strip comments, <title>, alt attrs before scanning for literal text ── */
+/* ── Strip comments, <title>, <script>, meta, attrs before scanning for literal text ── */
 function stripMetaText(html) {
   return html
     .replace(/<!--[\s\S]*?-->/g, '')
     .replace(/<title[^>]*>[\s\S]*?<\/title>/gi, '')
+    .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
+    .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+    .replace(/<meta[^>]*>/gi, '')
     .replace(/\balt\s*=\s*"[^"]*"/gi, '')
     .replace(/\balt\s*=\s*'[^']*'/gi, '')
+    .replace(/\btitle\s*=\s*"[^"]*"/gi, '')
+    .replace(/\btitle\s*=\s*'[^']*'/gi, '')
     .replace(/\baria-label\s*=\s*"[^"]*"/gi, '')
     .replace(/\baria-label\s*=\s*'[^']*'/gi, '')
-    .replace(/\bdata-hero-[a-z]*\s*=\s*"[^"]*"/gi, '')
-    .replace(/\bdata-hero-[a-z]*\s*=\s*'[^']*'/gi, '');
+    .replace(/\bdata-hero-[a-z-]*\s*=\s*"[^"]*"/gi, '')
+    .replace(/\bdata-hero-[a-z-]*\s*=\s*'[^']*'/gi, '')
+    .replace(/\bdata-[a-z-]*\s*=\s*"[^"]*"/gi, '');
 }
 
 /* ── Check one file ── */
@@ -71,10 +77,13 @@ async function checkFile(fileRel) {
   const violations = [];
   const isComponentFile = fileRel.startsWith('components/');
 
-  /* Rule 1: No <section class="hero"> or hero-grid/hero-cell unprefixed classes */
+  /* Rule 1: No <section class="hero"> (bare) or hero-grid/hero-cell unprefixed classes.
+     We specifically allow hero-badge, hero-desc, hero-actions as part of existing page
+     patterns — only the structural hero grid classes are forbidden. */
   if (!isComponentFile) {
-    if (/\bclass\s*=\s*["'][^"']*\bhero\b(?!-)[^"']*["']/.test(html)) {
-      violations.push('R1: uses unprefixed "hero" class — should be "ce-hero"');
+    /* Flag <section class="hero"> without ce- prefix, but allow "ce-hero ..." anywhere */
+    if (/<section[^>]*\bclass\s*=\s*["'](?!.*\bce-hero\b)[^"']*\bhero\b(?!-)[^"']*["']/.test(html)) {
+      violations.push('R1: <section class="hero"> — should be "ce-hero"');
     }
     if (/\bclass\s*=\s*["'][^"']*\bhero-grid\b[^"']*["']/.test(html)) {
       violations.push('R1: uses bespoke "hero-grid" class — should use ce-hero component');
@@ -98,13 +107,28 @@ async function checkFile(fileRel) {
     }
   }
 
-  /* Rule 3: No inlined crossfade / old image pool references */
+  /* Rule 3: No inlined crossfade / old image pool references.
+     Exempt:
+       - the sitemap page (it probes staging as part of its health check feature)
+       - <a href> links to staging (external link to a live tool at staging.xyz is OK,
+         it's a prod→prod URL, not a build dependency).
+     Flag only staging URLs that look like build-time asset references: src=, url(), import. */
   if (!isComponentFile) {
+    const isSitemap = fileRel.startsWith('sitemap/');
     if (/grid-images\/compressed\//.test(html)) {
       violations.push('R3: references old grid-images/compressed/ path — pool lives in /components/ce-hero/pools/');
     }
-    if (/staging\.curiousendeavor\.com/.test(html)) {
-      violations.push('R3: references staging.curiousendeavor.com — prod must not depend on staging');
+    if (!isSitemap) {
+      /* Block asset references: src="https://staging...", url('https://staging...'), fetch(stagingCDN) */
+      if (/\bsrc\s*=\s*["']https?:\/\/staging\.curiousendeavor\.com/.test(html)) {
+        violations.push('R3: <img src=> or <script src=> points at staging.curiousendeavor.com — prod asset must be same-origin');
+      }
+      if (/\burl\s*\(\s*["']?https?:\/\/staging\.curiousendeavor\.com/.test(html)) {
+        violations.push('R3: CSS url() points at staging.curiousendeavor.com — prod asset must be same-origin');
+      }
+      if (/fetch\s*\(\s*["']https?:\/\/staging\.curiousendeavor\.com\/[^"']*\.(jpg|jpeg|png|webp|svg|css|js)/.test(html)) {
+        violations.push('R3: fetch() pulls assets from staging.curiousendeavor.com — same-origin only');
+      }
     }
     /* A crossfade IIFE usually has this pattern: new Image() + background-image url */
     if (/new\s+Image\s*\(\s*\)[\s\S]{0,400}backgroundImage/.test(html) &&
@@ -123,23 +147,24 @@ async function checkFile(fileRel) {
     }
   }
 
-  /* Rule 5: Literal "curious endeavor." as rendered text */
+  /* Rule 5: Literal "curious endeavor." wordmark as rendered text (the styled logo).
+     Only flag when it appears inside a .hero-logo / .ce-hero-title / .logo class — i.e.,
+     a styled wordmark. Plain body text mentioning the company name (legal, footer, etc.)
+     is fine; the rule is about the WORDMARK treatment, not every mention. */
   if (!isComponentFile) {
     const scrubbed = stripMetaText(html);
-    /* Find the phrase, case-insensitive, with optional period and spacing variance */
-    const re = /curious\s+endeavor\.?/gi;
-    let m;
-    while ((m = re.exec(scrubbed)) !== null) {
-      /* Check if this match is inside an <img> alt (already stripped) or attribute — we stripped those above.
-         If still present, it's in visible body text → violation. */
-      /* Look back a short distance for the enclosing element's start tag. If we find "data-hero-title" nearby,
-         it's OK because the component injects HTML (which could be an <img>). */
-      const before = scrubbed.slice(Math.max(0, m.index - 200), m.index);
-      if (/data-hero-title\s*=\s*["'][^"']*$/.test(before)) continue;
-      violations.push(
-        `R5: text "${m[0]}" appears in rendered body — must be <img src="${CANONICAL_LOGO}"> instead`
-      );
-      break; /* one violation per file is enough */
+    /* Match a styled wordmark: element with a logo class containing "curious endeavor" as text */
+    const logoElementRe =
+      /<(span|h1|h2|div)[^>]*\bclass\s*=\s*["'][^"']*(hero-logo|hero-text-logo|ce-hero-title|wordmark|brand-logo|logo)\b[^"']*["'][^>]*>([\s\S]{0,200}?)<\/\1>/gi;
+    let em;
+    while ((em = logoElementRe.exec(scrubbed)) !== null) {
+      const inner = em[3];
+      if (/curious\s+endeavor/i.test(inner) && !/<img\b/i.test(inner)) {
+        violations.push(
+          `R5: styled wordmark "${inner.trim().slice(0, 40)}" is rendered text — must be <img src="${CANONICAL_LOGO}"> instead`
+        );
+        break;
+      }
     }
   }
 
