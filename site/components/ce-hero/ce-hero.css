@@ -40,13 +40,13 @@
 
 .ce-hero *, .ce-hero *::before, .ce-hero *::after { box-sizing: border-box; }
 
-/* ── Grid — 3×3 responsive, centered, bleeds slightly on desktop ── */
+/* ── Grid — 3×3 responsive, centered, 8% bleed (matches figma-story) ── */
 .ce-hero-grid {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: calc(100% * 1.06);
-  height: calc(100% * 1.06);
+  width: calc(100% * 1.08);
+  height: calc(100% * 1.08);
   transform: translate(-50%, -50%);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -85,7 +85,8 @@
   justify-content: center;
   text-align: center;
   padding: clamp(16px, 2.5vw, 40px);
-  gap: 10px;
+  gap: 8px;
+  border-radius: 4px;
 }
 .ce-hero-title {
   font-family: var(--ce-font-serif);
