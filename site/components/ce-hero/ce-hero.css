@@ -119,6 +119,17 @@
   margin: 0;
 }
 
+/* ── Variants ──
+   Default (no variant)    : large serif headline in black, <em> turns red. Used by /deck/.
+   data-hero-variant="logo": small red serif logo + uppercase label. Used by essays. */
+.ce-hero[data-hero-variant="logo"] .ce-hero-title {
+  font-size: clamp(13px, 1.8vw, 22px);
+  color: var(--ce-red);
+}
+.ce-hero[data-hero-variant="logo"] .ce-hero-title em {
+  color: inherit;
+}
+
 /* ── Tablet — drop the 8% bleed so the grid fits the viewport exactly.
       Grid stays absolute-centered inside a 100vh .ce-hero, same as figma-story. ── */
 @media (max-width: 900px) {
@@ -155,6 +166,7 @@
     padding: 28px 16px;
   }
   .ce-hero-title { font-size: 20px; }
+  .ce-hero[data-hero-variant="logo"] .ce-hero-title { font-size: 18px; }
   .ce-hero-subtitle { font-size: 12px; max-width: none; }
   /* Bottom block — mirror the brick */
   .ce-hero-cell.is-img:nth-child(6) { grid-column: 1; grid-row: 5 / 6; }

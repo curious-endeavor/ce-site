@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Subject Matter Expert — Assaf Dagan × Curious Endeavor</title>
+<meta name="description" content="Every person with an idea is a designer now. The question is whether you have something worth designing.">
+<link rel="stylesheet" href="https://use.typekit.net/ffj8sbd.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/components/ce-hero/ce-hero.css">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --red: #cc0000;
+  --black: #1a1a1a;
+  --grey: #666;
+  --light: #999;
+  --muted: #aaa;
+  --border: #eee;
+  --bg: #fff;
+  --bg-alt: #f8f7f5;
+  --font-serif: 'larken', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --size-display: 48px;
+  --size-h1: 28px;
+  --size-h2: 20px;
+  --size-body: 14px;
+  --size-small: 12px;
+  --size-label: 10px;
+}
+
+html { font-size: 16px; scroll-behavior: smooth; overflow-x: hidden; }
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--black);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a { color: inherit; text-decoration: none; }
+
+/* ── Reveal ── */
+.r {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.r.v { opacity: 1; transform: translateY(0); }
+.r-d1 { transition-delay: 0.1s; }
+.r-d2 { transition-delay: 0.2s; }
+.r-d3 { transition-delay: 0.3s; }
+.r-d4 { transition-delay: 0.4s; }
+.r-d5 { transition-delay: 0.5s; }
+.r-d6 { transition-delay: 0.6s; }
+.r-d7 { transition-delay: 0.7s; }
+.r-d8 { transition-delay: 0.8s; }
+@media (prefers-reduced-motion: reduce) {
+  .r { opacity: 1; transform: none; transition: none; }
+}
+
+/* ── Topbar ── */
+.topbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 16px 0;
+  background: rgba(255,255,255,0.96);
+  border-bottom: 1px solid var(--border);
+}
+.topbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topbar-brand {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--black);
+  transition: color 0.2s;
+}
+.topbar-brand:hover { color: var(--red); }
+.topbar-issue {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* ── Hero uses shared ce-hero component (see /components/ce-hero/) ── */
+
+/* ── TL;DR ── */
+.tldr-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 40px 60px;
+  border-top: 1px solid var(--border);
+}
+.tldr-label {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 500;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.tldr-label::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--red);
+}
+.tldr-body {
+  max-width: 680px;
+}
+.tldr-body p {
+  font-size: var(--size-body);
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--grey);
+  margin-bottom: 16px;
+}
+.tldr-body p:last-child { margin-bottom: 0; }
+
+/* ── Article ── */
+.article {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.article-chapter {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 0 80px;
+  padding: 100px 0;
+  border-top: 1px solid var(--border);
+  align-items: start;
+}
+.article-chapter:first-child { border-top: none; }
+
+.chapter-number {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 400;
+  padding-top: 8px;
+  position: sticky;
+  top: 80px;
+}
+.chapter-number strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--light);
+  letter-spacing: 0;
+  text-transform: none;
+  margin-top: 6px;
+}
+
+.chapter-body h2 {
+  font-family: var(--font-serif);
+  font-size: var(--size-h1);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--black);
+  margin-bottom: 32px;
+}
+.chapter-body h2 a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 2px solid var(--red);
+  padding-bottom: 1px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.chapter-body h2 a:hover { color: var(--red); }
+
+.chapter-body p {
+  font-size: var(--size-body);
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--grey);
+  margin-bottom: 24px;
+  max-width: 660px;
+}
+.chapter-body p:last-child { margin-bottom: 0; }
+
+/* ── Pull Quote ── */
+.pull-quote {
+  border-left: 3px solid var(--red);
+  padding: 24px 0 24px 40px;
+  margin: 56px 0;
+  max-width: 640px;
+}
+.pull-quote p {
+  font-family: var(--font-serif);
+  font-size: var(--size-h2) !important;
+  font-weight: 400 !important;
+  font-style: italic;
+  line-height: 1.4 !important;
+  color: var(--black) !important;
+  letter-spacing: -0.01em;
+  margin-bottom: 0 !important;
+}
+
+/* ── Work Cited Cards ── */
+.cited-section {
+  padding: 80px 0 100px;
+  border-top: 1px solid var(--border);
+}
+.cited-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.cited-label {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 500;
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.cited-label::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--red);
+}
+.cited-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+.cited-card {
+  display: block;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+  text-decoration: none;
+  overflow: hidden;
+}
+.cited-card:hover { background: var(--bg-alt); }
+.cited-card-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+.cited-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.cited-card:hover .cited-card-image img { transform: scale(1.03); }
+.cited-card-body {
+  padding: 20px 24px 24px;
+}
+.cited-card-category {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.cited-card-title {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  color: var(--black);
+  margin-bottom: 16px;
+}
+.cited-card-link {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--light);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+.cited-card:hover .cited-card-link { color: var(--red); }
+.cited-card-link-arrow { transition: transform 0.2s; }
+.cited-card:hover .cited-card-link-arrow { transform: translateX(3px); }
+
+/* ── Feature Quote ── */
+.feature-quote {
+  background: var(--black);
+  padding: 120px 40px;
+  text-align: center;
+}
+.feature-quote-inner { max-width: 860px; margin: 0 auto; }
+.feature-quote blockquote {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 3.5vw, var(--size-display));
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  color: #fff;
+}
+.feature-quote blockquote em { font-style: normal; color: var(--red); }
+
+/* ── Team ── */
+.team-section {
+  padding: 120px 0;
+  border-top: 1px solid var(--border);
+}
+.team-header { margin-bottom: 80px; }
+.team-label {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 500;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.team-label::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--red);
+}
+.team-header h2 {
+  font-family: var(--font-serif);
+  font-size: var(--size-display);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  color: var(--black);
+  max-width: 700px;
+}
+.team-header p {
+  font-size: var(--size-body);
+  font-weight: 400;
+  color: var(--grey);
+  line-height: 1.7;
+  max-width: 560px;
+  margin-top: 24px;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+.team-card {
+  padding: 40px 32px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+.team-card:hover { background: var(--bg-alt); }
+.team-card-avatar {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  filter: grayscale(15%);
+}
+.team-card-name {
+  font-family: var(--font-serif);
+  font-size: 18px; font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--black); margin-bottom: 6px;
+}
+.team-card-role { font-size: 13px; color: var(--muted); line-height: 1.5; font-weight: 400; }
+
+/* ── Figma Embed ── */
+.figma-section {
+  padding: 100px 0;
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+}
+.figma-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.figma-header {
+  margin-bottom: 48px;
+}
+.figma-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 500;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.figma-eyebrow::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--red);
+}
+.figma-header h2 {
+  font-family: var(--font-serif);
+  font-size: var(--size-h1);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  color: var(--black);
+}
+.figma-embed-wrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.figma-embed-wrap iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ── Closing ── */
+.closing {
+  padding: 160px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.closing-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.closing-eyebrow::before,
+.closing-eyebrow::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: var(--border);
+}
+.closing h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 3.5vw, var(--size-display));
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: var(--black);
+  max-width: 820px;
+  margin: 0 auto 56px;
+}
+.closing-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: var(--size-body);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background: var(--black);
+  padding: 16px 36px;
+  transition: background 0.2s, transform 0.15s;
+}
+.closing-cta:hover { background: var(--red); transform: translateY(-2px); }
+.closing-cta span { transition: transform 0.2s; }
+.closing-cta:hover span { transform: translateX(4px); }
+
+/* ── Footer ── */
+.footer {
+  padding: 40px 40px;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-brand { font-family: var(--font-serif); font-size: 14px; color: var(--light); }
+.footer-contact { font-size: 13px; color: var(--muted); }
+.footer-contact a { transition: color 0.2s; }
+.footer-contact a:hover { color: var(--red); }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .topbar-inner,
+  .article,
+  .cited-inner,
+  .figma-inner,
+  .tldr-section { padding-left: 24px; padding-right: 24px; }
+
+  .closing { padding-left: 24px; padding-right: 24px; }
+  .footer { padding-left: 24px; padding-right: 24px; }
+
+  .article-chapter {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 60px 0;
+  }
+  .chapter-number { position: static; }
+
+  .cited-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .team-section { padding: 80px 0; }
+  .team-header,
+  .team-grid { padding: 0 24px; }
+
+  .feature-quote { padding: 80px 24px; }
+  /* Hero responsive rules live in /components/ce-hero/ce-hero.css */
+}
+
+@media (max-width: 540px) {
+  .cited-grid { grid-template-columns: 1fr; }
+
+  /* TL;DR: stack text + photo vertically, image right-aligned */
+  .tldr-section > div[style] {
+    flex-direction: column !important;
+    gap: 24px !important;
+    align-items: flex-end !important;
+  }
+  .tldr-section .tldr-body {
+    align-self: flex-start;
+  }
+  .tldr-section img[alt="Assaf Dagan"] {
+    width: 140px !important;
+  }
+
+  /* Proof cards: stack vertically */
+  .chapter-body > div[style*="grid-template-columns:repeat(3"] {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Quote gif: stack below text instead of absolute overlay */
+  .pull-quote[style*="position:relative"] img[src*="quote-gif.gif"] {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    margin-top: 16px;
+    border-radius: 4px;
+  }
+
+  /* Agent team cards: 2 col */
+  div[style*="grid-template-columns:repeat(4"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Prevent any horizontal overflow */
+  .article, main, section, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  img, video, iframe {
+    max-width: 100% !important;
+  }
+  .pull-quote {
+    max-width: 100% !important;
+    overflow: hidden;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Hero: shared ce-hero component (logo variant — small red serif + label) -->
+<section class="ce-hero"
+         data-hero-variant="logo"
+         data-hero-title="curious endeavor."
+         data-hero-label="Essay &middot; April 2026"
+         aria-label="Hero">
+</section>
+
+<!-- TL;DR -->
+<section class="tldr-section">
+  <div class="tldr-label r">The Thesis</div>
+  <div style="display:flex; align-items:center; gap:48px; justify-content:space-between;" class="r r-d1">
+    <div class="tldr-body" style="flex:1; max-width:none;">
+      <p>Every person with an idea is a designer now. The question is whether you have something worth designing.</p>
+      <p>A veteran NYC designer left his agency, trained AI agents on two decades of playbooks, and discovered that domain expertise &mdash; not design skill &mdash; is the new creative currency. This is how it happened.</p>
+    </div>
+    <div style="flex-shrink:0; position:relative; cursor:default;" onmouseenter="this.querySelector('.tip').style.opacity='1'" onmouseleave="this.querySelector('.tip').style.opacity='0'">
+      <img src="/assets/essays/subject-matter-expert/assaf.jpg" alt="Assaf Dagan" style="width:180px; height:auto; border-radius:4px; object-fit:cover; display:block;">
+      <span class="tip" style="position:absolute; bottom:-28px; left:50%; transform:translateX(-50%); font-size:11px; font-style:italic; color:var(--muted); white-space:nowrap; opacity:0; transition:opacity 0.3s ease 0.2s; pointer-events:none;">me, thinking about fish tacos</span>
+    </div>
+  </div>
+</section>
+
+<!-- Article -->
+<main class="article">
+
+  <!-- I — The Thesis -->
+  <div class="article-chapter">
+    <div class="chapter-number r">
+      <em style="font-family:var(--font-serif); font-style:italic; font-size:13px; color:var(--light); letter-spacing:0; text-transform:none;">What I believe now</em>
+    </div>
+    <div class="chapter-body">
+      <h2 class="r r-d1">The Age of the Subject Matter Expert</h2>
+      <p class="r r-d2">The barrier to entry just dropped through the floor. A lot of bad work is going to flood in and get sold as design. That is real and it is coming. At the same time, more businesses are going to get built and succeed &mdash; because the people with the ideas can now execute them.</p>
+      <p class="r r-d3">Design is going to split deeper: aesthetics on one side, communication and functionality on the other. More strange, ambitious, out-there things are going to exist &mdash; simply because someone thought it was cool and made it.</p>
+      <p class="r r-d4">The subject matter expert wins. The person who spent years developing taste, judgment, and a point of view has never had more leverage.</p>
+      <div class="pull-quote r r-d5">
+        <p>"Instead of designing interfaces, we are now able to design tentacles. An exoskeleton. Something that makes us faster, stronger, and better at what we already know."</p>
+      </div>
+      <p class="r r-d6">I know this because I lived it. Here is how.</p>
+    </div>
+  </div>
+
+  <!-- II — Why the Old Way Broke -->
+  <div class="article-chapter">
+    <div class="chapter-number r">
+      <em style="font-family:var(--font-serif); font-style:italic; font-size:13px; color:var(--light); letter-spacing:0; text-transform:none;">What I left behind</em>
+    </div>
+    <div class="chapter-body">
+      <h2 class="r r-d1">Why the Old Way Broke</h2>
+      <p class="r r-d2">For me, design work had become boring. Not the craft &mdash; the job. Specs, component libraries, stakeholder alignment, revision cycles, design systems maintenance. Rinse and repeat. A creative discipline had turned into project management with a creative alibi.</p>
+      <p class="r r-d3">I ran a NYC brand agency for years. Hiring, firing, P&amp;L, client management. Creativity became the thing I got to when the real work was done &mdash; if I got to it at all. I was good at running the agency. I did not love it.</p>
+      <img src="/assets/essays/subject-matter-expert/agency.jpg" alt="Design agency studio" style="width:100%; max-width:660px; border-radius:4px; margin:40px 0 32px;" class="r r-d4">
+      <p class="r r-d5">I was not the only one who felt it. I was just stubborn enough to leave.</p>
+    </div>
+  </div>
+
+  <!-- III — How I Got Here -->
+  <div class="article-chapter">
+    <div class="chapter-number r">
+      <em style="font-family:var(--font-serif); font-style:italic; font-size:13px; color:var(--light); letter-spacing:0; text-transform:none;">The long road</em>
+    </div>
+    <div class="chapter-body">
+      <h2 class="r r-d1">How I Got Here</h2>
+      <p class="r r-d2">Twenty-plus years in design. Erotic art Flash ActionScript websites in Barcelona, through Audi, Diesel, Orangina and the &Eacute;lys&eacute;e's digital strategy in Paris to my own dream brand agency in New York City. I ran the entire spectrum.</p>
+      <p class="r r-d3">Along the way I built obsessive documentation: playbooks for every role &mdash; sales, strategy, design, workflow. Every standard written down. What good looks like, always explicit. It was my answer to the NYC talent trap: hire as junior as you can afford, train them fast, watch them leave for a sexier agency the moment they get good. At least the knowledge stayed.</p>
+      <p class="r r-d4">I left New York. Started consulting. I wanted to do the work again, not manage the machine.</p>
+    </div>
+  </div>
+
+  <!-- IV — The Shift -->
+  <div class="article-chapter">
+    <div class="chapter-number r">
+      <em style="font-family:var(--font-serif); font-style:italic; font-size:13px; color:var(--light); letter-spacing:0; text-transform:none;">When it clicked</em>
+    </div>
+    <div class="chapter-body">
+      <h2 class="r r-d1">The Shift</h2>
+      <p class="r r-d2">I tried Midjourney, ChatGPT, Perplexity, later Weavy. Genuinely useful for visuals and content volume. But I was still stitching everything together between services. No coherence. No brand logic. Still lonely in the thinking.</p>
+      <img src="/assets/essays/subject-matter-expert/shift.jpg" alt="" style="width:100%; border-radius:4px; display:block; margin:40px 0 32px;" class="r r-d3">
+      <p class="r r-d4">Then a friend helped me set up OpenClaw and work with Claude Code. Something shifted. Those playbooks &mdash; every role, every standard, every definition of what good looks like &mdash; could become actual agents with real judgment. Not prompts. Brand Agents.</p>
+      <p class="r r-d4">I trained 8: research, strategy, copywriting, design direction, content, production, a critic and a project manager. A lot of hand-holding early on. But every one has high degrees of problem-solving and they are genuinely coachable.</p>
+      <div class="pull-quote r r-d5">
+        <p>"The documentation I had built to protect against employee churn became institutional intelligence."</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- V — Taste as Infrastructure -->
+  <div class="article-chapter">
+    <div class="chapter-number r">
+      <em style="font-family:var(--font-serif); font-style:italic; font-size:13px; color:var(--light); letter-spacing:0; text-transform:none;">How my eye compounds</em>
+    </div>
+    <div class="chapter-body">
+      <h2 class="r r-d1"><a href="https://staging.curiousendeavor.com/taste/" target="_blank" rel="noopener">Taste as Infrastructure</a></h2>
+      <p class="r r-d2">I downloaded thousands of references: design case studies, brand projects, type foundries, saved posts, tutorials, articles. I built a trend radar &mdash; when my favorite agencies or blogs move, I get a signal. When enough trusted signals converge on the same thing, it gets indexed as a trend. Then I describe what I love about it.</p>
+      <a href="https://staging.curiousendeavor.com/taste/" target="_blank" rel="noopener" class="r r-d3" style="display:block; max-width:660px; margin:40px 0 32px;">
+        <img src="/assets/essays/subject-matter-expert/cited-taste.jpg" alt="CE Taste Library" style="width:100%; border-radius:4px; display:block;">
+      </a>
+      <p class="r r-d4">Over time, the agents learn to see the way I see. My eye compounds now. The references don't just sit there as a mood board &mdash; they become a living calibration.</p>
+    </div>
+  </div>
+
+  <!-- VI — The Proof -->
+  <div class="article-chapter">
+    <div class="chapter-number r">
+      <em style="font-family:var(--font-serif); font-style:italic; font-size:13px; color:var(--light); letter-spacing:0; text-transform:none;">The first brand</em>
+    </div>
+    <div class="chapter-body">
+      <h2 class="r r-d1">The Proof</h2>
+      <p class="r r-d2">I started with brand strategy &mdash; positioning, audience, competitive landscape. Then I had the agents write it directly into Figma. From there they proposed three design directions, built the brand book, developed the photography style. I chose one direction. Everything downstream followed &mdash; logo, color, typography, layout.</p>
+      <p class="r r-d3">That distinction matters. The thinking &mdash; the judgment calls, the creative pressure, the taste that decides which direction and why &mdash; that was mine. The execution &mdash; the labor, the iteration, the production &mdash; that was the system.</p>
+      <p class="r r-d4">Eight arms. Ten times the battery. For the first time in years, I felt liberated in the work rather than buried by it.</p>
+
+      <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; max-width:660px; margin:48px 0 0;" class="r r-d5">
+
+        <a href="https://www.curiousendeavor.com/phat-foods/strategy-board.html" target="_blank" rel="noopener" style="text-decoration:none; border:1px solid var(--border); border-radius:6px; overflow:hidden; transition:background 0.2s; display:block;" onmouseover="this.style.background='var(--bg-alt)'" onmouseout="this.style.background='transparent'">
+          <img src="/assets/essays/subject-matter-expert/cited-strategy.jpg" alt="Phat Foods Brand Strategy" style="width:100%; aspect-ratio:16/10; object-fit:cover; display:block; border-bottom:1px solid var(--border);">
+          <div style="padding:12px 14px 14px;">
+            <div style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:var(--red); font-weight:500; margin-bottom:5px;">Brand Strategy</div>
+            <div style="font-family:var(--font-serif); font-size:13px; color:var(--black); line-height:1.3;">Phat Foods &mdash; Strategy</div>
+          </div>
+        </a>
+
+        <a href="https://ce-website-peach.vercel.app/projects/Olevia/Brandbook/v2.html" target="_blank" rel="noopener" style="text-decoration:none; border:1px solid var(--border); border-radius:6px; overflow:hidden; transition:background 0.2s; display:block;" onmouseover="this.style.background='var(--bg-alt)'" onmouseout="this.style.background='transparent'">
+          <img src="/assets/essays/subject-matter-expert/cited-brand.jpg" alt="Olevia Brand Book" style="width:100%; aspect-ratio:16/10; object-fit:cover; display:block; border-bottom:1px solid var(--border);">
+          <div style="padding:12px 14px 14px;">
+            <div style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:var(--red); font-weight:500; margin-bottom:5px;">Brand Identity</div>
+            <div style="font-family:var(--font-serif); font-size:13px; color:var(--black); line-height:1.3;">Olevia &mdash; Brand Book</div>
+          </div>
+        </a>
+
+        <a href="https://docs.google.com/presentation/d/1H0gtkiFYcWKWMMbSpYeW2QuMlxSccmW_qYfeYNiNb2E/edit" target="_blank" rel="noopener" style="text-decoration:none; border:1px solid var(--border); border-radius:6px; overflow:hidden; transition:background 0.2s; display:block;" onmouseover="this.style.background='var(--bg-alt)'" onmouseout="this.style.background='transparent'">
+          <img src="/assets/essays/subject-matter-expert/cited-deck.jpg" alt="Olevia Investor Deck" style="width:100%; aspect-ratio:16/10; object-fit:cover; display:block; border-bottom:1px solid var(--border);">
+          <div style="padding:12px 14px 14px;">
+            <div style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:var(--red); font-weight:500; margin-bottom:5px;">Investor Deck</div>
+            <div style="font-family:var(--font-serif); font-size:13px; color:var(--black); line-height:1.3;">Olevia &mdash; Investor Deck</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- Article continued -->
+<main class="article">
+
+  <!-- VII — Where Figma Lands -->
+  <div class="article-chapter">
+    <div class="chapter-number r">
+      <em style="font-family:var(--font-serif); font-style:italic; font-size:13px; color:var(--light); letter-spacing:0; text-transform:none;">An honest answer</em>
+    </div>
+    <div class="chapter-body">
+      <h2 class="r r-d1">Where Figma Lands</h2>
+      <p class="r r-d2">I used to sit in front of an empty Figma doc the way a writer sits in front of a blank page. That was where the thinking happened. Experimenting, exploring, discovering what worked by moving things around.</p>
+      <p class="r r-d3">That changed. The thinking moved upstream &mdash; into conversation, into strategy, into the agent layer. Now I verbalize my experiments before I visualize them. Figma is where I collaborate, present, hand off, and create final assets. Still essential. But it moved from where I think to where I deliver.</p>
+      <p class="r r-d4">Adobe hardly makes an appearance anymore. I keep it around for a random Photoshop thing out of muscle memory.</p>
+      <p class="r r-d5">Freeing my mind also made my hands more idle. I am not sure yet what to make of that.</p>
+      <video src="/assets/essays/subject-matter-expert/figma-video.mp4" autoplay loop muted playsinline controls style="width:100%; max-width:660px; border-radius:4px; margin-top:40px; display:block;" class="r r-d6"></video>
+      <p class="r r-d7" style="font-size:11px; color:var(--muted); margin-top:8px; font-style:italic;">Dan and I the first time we made the agents work in Figma, using speech. (pre Claude Code MCP)</p>
+      <div class="pull-quote r r-d8" style="margin-top:40px;">
+        <p>"Not everyone can be a designer. But those who are meant to be &mdash; and got lost in admin &mdash; can finally be designers again."</p>
+        <span style="display:block; margin-top:12px; font-family:var(--font-sans); font-size:11px; font-style:normal; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted);">Lukas, co-founder</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIII — The Team -->
+  <div class="article-chapter">
+    <div class="chapter-number r">
+      <em style="font-family:var(--font-serif); font-style:italic; font-size:13px; color:var(--light); letter-spacing:0; text-transform:none;">Three friends, zero designers</em>
+    </div>
+    <div class="chapter-body">
+      <h2 class="r r-d1">The Team</h2>
+      <p class="r r-d2">I brought in three friends. None of them designers.</p>
+      <p class="r r-d3"><strong>Lukas</strong> &mdash; a gifted salesperson and a genuine empath. He now runs pitches based on my work, translating it loyally into his domain. <strong>Dan</strong> &mdash; a storyteller with sharp marketing instincts and technical range. He can express what we do and never falter on execution. <strong>Felipe</strong> &mdash; a systems builder and engineer. He can take what I do and run it at scale &mdash; without needing to know what font I used.</p>
+      <p class="r r-d4">I did not hire for design talent. I hired for domain expertise and character. The system handled the rest.</p>
+      <div class="pull-quote r r-d5" style="position:relative;">
+        <p>"And guess what &mdash; we are all designers now."</p>
+        <img src="/assets/essays/subject-matter-expert/quote-gif.gif" alt="" style="position:absolute; right:0; top:0; height:100%; width:auto; border-radius:3px; object-fit:cover;">
+      </div>
+    </div>
+  </div>
+
+  <!-- IX — The Point -->
+  <div class="article-chapter">
+    <div class="chapter-number r">
+      <em style="font-family:var(--font-serif); font-style:italic; font-size:13px; color:var(--light); letter-spacing:0; text-transform:none;">Why this matters</em>
+    </div>
+    <div class="chapter-body">
+      <h2 class="r r-d1">The Point</h2>
+      <p class="r r-d2">The barrier to creative expression is virtually gone. Taste, judgment, and domain expertise are the new currency. That is not a threat to designers &mdash; it is the best position they have been in for years.</p>
+      <p class="r r-d3">The tools themselves are becoming almost redundant. What sticks is the culture: the taste, the mastery. Adobe is a tool. Figma is something else &mdash; it is connected to the culture and helps guide it. In an age where everyone can produce at scale, the companies dialed into a creative culture transcend the tool. That is rare and that is valuable.</p>
+      <p class="r r-d4">The exoskeleton I discovered can fit anyone. It is not a tool &mdash; it is an amplifier. If you have spent years developing a real point of view, you have never had more leverage than right now.</p>
+    </div>
+  </div>
+
+</main>
+
+
+<!-- The Brand Agents -->
+<main class="article">
+  <div class="article-chapter">
+    <div class="chapter-number r">
+      <em style="font-family:var(--font-serif); font-style:italic; font-size:13px; color:var(--light); letter-spacing:0; text-transform:none;">The system</em>
+    </div>
+    <div class="chapter-body">
+      <h2 class="r r-d1">Eight agents. One point of view.</h2>
+      <p class="r r-d2">Not a roster of generalists &mdash; a set of specialists, each trained on a decade of taste, standards, and what good looks like.</p>
+      <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:0; border-top:1px solid var(--border); border-left:1px solid var(--border); max-width:660px; margin-top:40px;">
+        <div class="team-card r r-d3">
+          <img src="/assets/team/kitt.png" alt="Kitt" class="team-card-avatar">
+          <div class="team-card-name">Kitt</div>
+          <div class="team-card-role">CEO &amp; Orchestrator</div>
+        </div>
+        <div class="team-card r r-d4">
+          <img src="/assets/team/gerri.png" alt="Gerri" class="team-card-avatar">
+          <div class="team-card-name">Gerri</div>
+          <div class="team-card-role">Project Manager</div>
+        </div>
+        <div class="team-card r r-d5">
+          <img src="/assets/team/ogilvy.png" alt="Ogilvy" class="team-card-avatar">
+          <div class="team-card-name">Ogilvy</div>
+          <div class="team-card-role">Copywriting</div>
+        </div>
+        <div class="team-card r r-d6">
+          <img src="/assets/team/tatiana.png" alt="Tatiana" class="team-card-avatar">
+          <div class="team-card-name">Tatiana</div>
+          <div class="team-card-role">Design Direction</div>
+        </div>
+        <div class="team-card r r-d3">
+          <img src="/assets/team/anton.png" alt="Anton" class="team-card-avatar">
+          <div class="team-card-name">Anton</div>
+          <div class="team-card-role">Critic</div>
+        </div>
+        <div class="team-card r r-d4">
+          <img src="/assets/team/julia.png" alt="Julia" class="team-card-avatar">
+          <div class="team-card-name">Julia</div>
+          <div class="team-card-role">Research</div>
+        </div>
+        <div class="team-card r r-d5">
+          <img src="/assets/team/jessica.jpg" alt="Jessica" class="team-card-avatar">
+          <div class="team-card-name">Jessica</div>
+          <div class="team-card-role">Content</div>
+        </div>
+        <div class="team-card r r-d6">
+          <img src="/assets/team/thibault.png" alt="Thibault" class="team-card-avatar">
+          <div class="team-card-name">Thibault</div>
+          <div class="team-card-role">Production</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Deck -->
+  <div class="article-chapter">
+    <div class="chapter-number r">
+      <em style="font-family:var(--font-serif); font-style:italic; font-size:13px; color:var(--light); letter-spacing:0; text-transform:none;">Twenty years in one deck</em>
+    </div>
+    <div class="chapter-body">
+      <h2 class="r r-d1">Curious Capabilities</h2>
+      <p class="r r-d2">This is twenty years of work distilled into one deck. Brand strategy, design direction, production systems, client management &mdash; every discipline I have practiced, now running through the agents. The point is not that AI made it. The point is that a subject matter expert made it, and the system kept up.</p>
+      <div class="r r-d3" style="position:relative; width:100%; max-width:660px; padding-bottom:75%; height:0; overflow:hidden; border:1px solid var(--border); margin-top:32px;">
+        <iframe
+          src="https://embed.figma.com/proto/eAtzDsG5ng0nM0qXzYzlTL/Curious-Capabilities?node-id=0-5768&p=f&viewport=-88%2C549%2C0.02&scaling=contain&content-scaling=fixed&starting-point-node-id=0%3A5768&page-id=0%3A1&embed-host=share"
+          allowfullscreen
+          style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer" style="padding:60px 40px 40px;">
+  <div class="footer-inner">
+    <div style="font-family:var(--font-serif); font-size:var(--size-body); font-style:italic; color:var(--light);">Assaf Dagan &mdash; Lisbon, 2026</div>
+    <div style="font-family:var(--font-serif); font-size:var(--size-body); font-style:italic; color:var(--light);">Creativity is a <span style="color:var(--red);">curious</span> and unexpected <span style="color:var(--red);">endeavor</span>.</div>
+  </div>
+  <div style="text-align:center; padding:16px 0 0; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--border);">Confidential</div>
+</footer>
+
+<script>
+// ── Scroll reveal ──
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('v'); obs.unobserve(e.target); }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.r').forEach(el => obs.observe(el));
+
+</script>
+<!-- Shared ce-hero component script — handles grid build, verify, crossfade -->
+<script src="/components/ce-hero/ce-hero.js" defer></script>
+</body>
+</html>
