@@ -8,8 +8,9 @@
     "sitemap": "node scripts/build-sitemap.mjs",
     "check-links": "node scripts/check-links.mjs",
     "check-links:live": "node scripts/check-links.mjs --live",
+    "check-hero": "node scripts/check-hero-consistency.mjs",
     "dev": "npx serve site -l 3000",
-    "validate": "node scripts/build-sitemap.mjs && node scripts/check-links.mjs --live"
+    "validate": "node scripts/build-sitemap.mjs && node scripts/check-hero-consistency.mjs && node scripts/check-links.mjs --live"
   },
   "engines": {
     "node": ">=18"

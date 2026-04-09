@@ -6,6 +6,58 @@ New entries go at the top.
 
 ---
 
+## 2026-04-09 — CE wordmark is always the style-guide PNG. No exceptions.
+
+**Rule.** The "curious endeavor." wordmark, wherever it appears, is
+the canonical red PNG from the style guide — never browser-rendered
+text, never a different color, never a different weight, never the
+`--red` CSS variable applied to a font.
+
+**Canonical file:** `site/assets/logos/ce-logo-red.png`
+(1670×160, red serif wordmark, transparent background).
+
+**Why.**
+- **Perfect visual consistency.** Same pixels everywhere, no font
+  fallback flash (Larken loads from Typekit — if it's slow or blocked,
+  users see Georgia until it arrives).
+- **Style guide is the source of truth.** Any text-rendered version
+  is a guess at what the style guide intends. The PNG is what the
+  style guide ships.
+- **Kerning, tracking, weight, optical sizing** all vary between
+  fonts and viewports. The PNG doesn't.
+- **Red is part of the wordmark itself,** not a color applied on top.
+  There is no non-red CE wordmark. Ever.
+
+**How to use it.**
+
+```html
+<!-- Anywhere the wordmark appears: nav, hero text cell, footer, OG image -->
+<img src="/assets/logos/ce-logo-red.png"
+     alt="Curious Endeavor"
+     style="height: 1.2em; width: auto;">
+```
+
+Size it via `height` in `em` or `px` — `width: auto` preserves the
+aspect ratio. Don't apply `color`, `filter`, `mix-blend-mode`, or
+anything that tints the image.
+
+**Enforcement.** `scripts/check-hero-consistency.mjs` (Layer-4 lint,
+see below) fails any PR that:
+
+1. Contains the literal string "curious endeavor." inside an HTML
+   element that renders text, outside of a comment or alt attribute.
+2. References a hero or logo element styled to non-red color
+   (`#000`, `var(--black)`, any non-red color) when the element class
+   includes "hero-logo" or "ce-hero-title" with variant=logo.
+3. Includes an `<img>` for the wordmark pointing at anything other
+   than `/assets/logos/ce-logo-red.png`.
+
+**Open migration work.** Home page (`/`) and `/figma-story/` on old
+prod still use the text span. They'll be swapped to the PNG as part
+of the home + essay Phase 1 conversions. Tracked in `open-items.md`.
+
+---
+
 ## 2026-04-09 — Fresh repo, escape `public/public/` nesting
 
 **Context.** Legacy repo `Assaf-Dagan/ce-website` had the site in
