@@ -121,13 +121,29 @@
 
 /* ── Variants ──
    Default (no variant)    : large serif headline in black, <em> turns red. Used by /deck/.
-   data-hero-variant="logo": small red serif logo + uppercase label. Used by essays. */
+   data-hero-variant="logo": small red serif logo + uppercase label. Used by essays + home.
+   Logo variant should use the canonical PNG wordmark via <img class="ce-hero-logo-img">
+   inside data-hero-title (not rendered text). See project/decisions.md. */
 .ce-hero[data-hero-variant="logo"] .ce-hero-title {
   font-size: clamp(13px, 1.8vw, 22px);
   color: var(--ce-red);
 }
 .ce-hero[data-hero-variant="logo"] .ce-hero-title em {
   color: inherit;
+}
+
+/* Canonical CE wordmark image — sized to match the logo variant type scale.
+   Use the clamp height so the image scales with the viewport like a font would,
+   without losing pixel sharpness. */
+.ce-hero-logo-img {
+  height: clamp(18px, 2.4vw, 32px);
+  width: auto;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+}
+@media (max-width: 540px) {
+  .ce-hero-logo-img { height: 22px; }
 }
 
 /* ── Tablet — drop the 8% bleed so the grid fits the viewport exactly.
