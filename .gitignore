@@ -1,0 +1,29 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Vercel
+.vercel/
+
+# Editor junk
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local env
+.env
+.env.local
+.env.*.local
+
+# Generated (regenerated from scripts/build-sitemap.mjs)
+# Keep these committed — they're the source of truth for the sitemap page.
+# site/sitemap/pages.json
+
+# Temp
+/tmp/
+*.tmp

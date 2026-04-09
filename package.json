@@ -1,0 +1,22 @@
+{
+  "name": "ce-site",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Curious Endeavor website — clean rewrite. Zero-build static site served by Vercel.",
+  "type": "module",
+  "scripts": {
+    "sitemap": "node scripts/build-sitemap.mjs",
+    "check-links": "node scripts/check-links.mjs",
+    "check-links:live": "node scripts/check-links.mjs --live",
+    "dev": "npx serve site -l 3000",
+    "validate": "node scripts/build-sitemap.mjs && node scripts/check-links.mjs --live"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/curious-endeavor/ce-site.git"
+  },
+  "license": "UNLICENSED"
+}

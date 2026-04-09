@@ -1,0 +1,2760 @@
+{
+  "generated": "2026-04-09T01:14:08.522Z",
+  "count": 306,
+  "pages": [
+    {
+      "path": "/",
+      "title": "Curious Endeavor",
+      "tag": "live",
+      "usesHero": true,
+      "modified": "2026-04-09",
+      "file": "new:index.html",
+      "notes": ""
+    },
+    {
+      "path": "/american-flat/",
+      "title": "American Flat | Brand Strategy | Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:american-flat/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/approach/",
+      "title": "Approach — Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:approach/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/botika-post-machine/",
+      "title": "Botika Post Machine",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:botika-post-machine/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/botika/",
+      "title": "Botika — Brand Intelligence Report",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:botika/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/botika/brief.html",
+      "title": "Botika — Brand Brief",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:botika/brief.html",
+      "notes": ""
+    },
+    {
+      "path": "/brandwatch-bridge/",
+      "title": "Brandwatch × CE — The Bridge",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:brandwatch-bridge/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/brandwatch-gap/",
+      "title": "Brandwatch + CE — The Gap",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:brandwatch-gap/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/brandwatch-internal/",
+      "title": "Brandwatch × CE — Capability Map",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:brandwatch-internal/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/brandwatch-pitch/",
+      "title": "Brandwatch × Curious Endeavor — From Intelligence to Action",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:brandwatch-pitch/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/brandwatch-poc/",
+      "title": "Curious Endeavor × Brandwatch — Dove Campaign POC",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:brandwatch-poc/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/brandwatch-v2/",
+      "title": "Brandwatch Partner — Curious Endeavor",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:brandwatch-v2/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/brandwatch-v2/wireframe-deliverables.html",
+      "title": "Deliverables Section — Wireframe",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:brandwatch-v2/wireframe-deliverables.html",
+      "notes": ""
+    },
+    {
+      "path": "/brandwatch/",
+      "title": "Curious Value — From Listening to Launching",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:brandwatch/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/camelia/",
+      "title": "Camelia",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:camelia/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/cc-fig-plugin-download/",
+      "title": "AI Design Plugins — Download",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:cc-fig-plugin-download/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/cc-fig-plugin-download/ui-hosted.html",
+      "title": "Any LLM Designer",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:cc-fig-plugin-download/ui-hosted.html",
+      "notes": ""
+    },
+    {
+      "path": "/cc-fig-plugin-download/ui.html",
+      "title": "Claude for Figma",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:cc-fig-plugin-download/ui.html",
+      "notes": ""
+    },
+    {
+      "path": "/ce-landing/",
+      "title": "Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:ce-landing/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/ce-landing/grid-images/compressed/",
+      "title": "CE Grid Images",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:ce-landing/grid-images/compressed/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/ce-lite/",
+      "title": "CE-Lite — Strategy Intake & Research Dashboard",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:ce-lite/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/ce-lite/intake-brief.html",
+      "title": "CE-Lite — Strategy Intake Brief",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:ce-lite/intake-brief.html",
+      "notes": ""
+    },
+    {
+      "path": "/ce-pricing/",
+      "title": "Services & Pricing — Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:ce-pricing/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/ce-tov/",
+      "title": "CE Tone of Voice — Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:ce-tov/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/chromatic-constellation-v2.html",
+      "title": "Chromatic Constellation",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:chromatic-constellation-v2.html",
+      "notes": ""
+    },
+    {
+      "path": "/chromatic-map/barcode-ce/",
+      "title": "Brand DNA — Competitive Intelligence",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:chromatic-map/barcode-ce/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/chromatic-map/barcode/",
+      "title": "Brand DNA — Fintech Color Signatures",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:chromatic-map/barcode/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/chromatic-map/gallery/",
+      "title": "Brand Chromatic Map — Competitive Gallery",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:chromatic-map/gallery/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/chromatic-map/mosaic/",
+      "title": "Chromatic Field — Competitive Intelligence",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:chromatic-map/mosaic/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/chromatic-map/quilt/",
+      "title": "Chromatic Quilt — Fintech Brand Color Study",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:chromatic-map/quilt/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/chromatic-map/spectrum-ce/",
+      "title": "Chromatic Spectrum — CE Competitive Intelligence",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:chromatic-map/spectrum-ce/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/chromatic-map/spectrum-v2/",
+      "title": "Chromatic Competitive Spectrum v2",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:chromatic-map/spectrum-v2/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/chromatic-map/spectrum/",
+      "title": "Chromatic Competitive Spectrum",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:chromatic-map/spectrum/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/chromatic-map/terrain/",
+      "title": "Chromatic Terrain — Fintech Color Territory Map",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:chromatic-map/terrain/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/chromatic-map/territories/",
+      "title": "Brand Territories — Fintech Competitive Map",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:chromatic-map/territories/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/chromatic-pulse-v2.html",
+      "title": "Chromatic Pulse v2 — Brand Image Mosaic",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:chromatic-pulse-v2.html",
+      "notes": ""
+    },
+    {
+      "path": "/chromatic/constellation-v2.html",
+      "title": "Chromatic Constellation",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:chromatic/constellation-v2.html",
+      "notes": ""
+    },
+    {
+      "path": "/chromatic/constellation-v3.html",
+      "title": "Chromatic Constellation — Competitive Color Landscape",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:chromatic/constellation-v3.html",
+      "notes": ""
+    },
+    {
+      "path": "/chromatic/constellation.html",
+      "title": "Chromatic Constellation — Fintech Brand Landscape",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:chromatic/constellation.html",
+      "notes": ""
+    },
+    {
+      "path": "/chromatic/genome-v2.html",
+      "title": "BRAND GENOME — CHROMATIC DNA",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:chromatic/genome-v2.html",
+      "notes": ""
+    },
+    {
+      "path": "/chromatic/genome-v3.html",
+      "title": "Brand Genome — Chromatic DNA Analysis",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:chromatic/genome-v3.html",
+      "notes": ""
+    },
+    {
+      "path": "/chromatic/genome.html",
+      "title": "BRAND GENOME — Chromatic DNA of Fintech",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:chromatic/genome.html",
+      "notes": ""
+    },
+    {
+      "path": "/chromatic/mosaic-fullscreen.html",
+      "title": "Chromatic Mosaic",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:chromatic/mosaic-fullscreen.html",
+      "notes": ""
+    },
+    {
+      "path": "/chromatic/pulse-v2.html",
+      "title": "Chromatic Pulse v2 — Brand Image Mosaic",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:chromatic/pulse-v2.html",
+      "notes": ""
+    },
+    {
+      "path": "/chromatic/pulse-v3.html",
+      "title": "Chromatic Pulse — Fintech Color Landscape",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:chromatic/pulse-v3.html",
+      "notes": ""
+    },
+    {
+      "path": "/chromatic/pulse.html",
+      "title": "Chromatic Pulse — Fintech Brand Color Analysis",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:chromatic/pulse.html",
+      "notes": ""
+    },
+    {
+      "path": "/chromatic/territory-v2.html",
+      "title": "COLOR TERRITORY — WHO OWNS WHAT",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:chromatic/territory-v2.html",
+      "notes": ""
+    },
+    {
+      "path": "/chromatic/territory-v3.html",
+      "title": "Color Territory — Curious Endeavor",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:chromatic/territory-v3.html",
+      "notes": ""
+    },
+    {
+      "path": "/chromatic/territory.html",
+      "title": "COLOR TERRITORY — Who Owns What",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:chromatic/territory.html",
+      "notes": ""
+    },
+    {
+      "path": "/clawpilot/",
+      "title": "ClawPilot — Your AI Joins The Meeting",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:clawpilot/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/clawpilot/brand-board.html",
+      "title": "ClawPilot — Brand Strategy Board",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:clawpilot/brand-board.html",
+      "notes": ""
+    },
+    {
+      "path": "/clawpilot/strategy.html",
+      "title": "Lobster — Brand Strategy",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:clawpilot/strategy.html",
+      "notes": ""
+    },
+    {
+      "path": "/clawpilot/visual-board-integrated.html",
+      "title": "ClawPilot: Evolution of the Claw — Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:clawpilot/visual-board-integrated.html",
+      "notes": ""
+    },
+    {
+      "path": "/clawpilot/visual-board.html",
+      "title": "ClawPilot Visual Research — Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:clawpilot/visual-board.html",
+      "notes": ""
+    },
+    {
+      "path": "/comms/",
+      "title": "Agent Comms",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:comms/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/competition/figma/brief.html",
+      "title": "Figma — Competitor Brief | CE for eToro",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:competition/figma/brief.html",
+      "notes": ""
+    },
+    {
+      "path": "/cropster-brief/",
+      "title": "Cropster × CE — Discovery Brief",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:cropster-brief/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/cropster-pitch/",
+      "title": "Curious Endeavor — For Cropster",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:cropster-pitch/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/cropster-pitch/cropster-hero-concept.html",
+      "title": "Cropster — CE Concept",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:cropster-pitch/cropster-hero-concept.html",
+      "notes": ""
+    },
+    {
+      "path": "/cropster-pitch/deliverables-preview.html",
+      "title": "CE × Cropster — What You Get",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:cropster-pitch/deliverables-preview.html",
+      "notes": ""
+    },
+    {
+      "path": "/cropster-pitch/index-current.html",
+      "title": "Curious Endeavor — For Cropster",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:cropster-pitch/index-current.html",
+      "notes": ""
+    },
+    {
+      "path": "/cropster-pitch/section-preview.html",
+      "title": "Section Preview — Cropster Pitch",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:cropster-pitch/section-preview.html",
+      "notes": ""
+    },
+    {
+      "path": "/cropster-pitch/tone-of-voice.html",
+      "title": "Tone of Voice — Cropster × Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:cropster-pitch/tone-of-voice.html",
+      "notes": ""
+    },
+    {
+      "path": "/cropster-research/",
+      "title": "Cropster — Brand Visual Research",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:cropster-research/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/deck/",
+      "title": "Curious Endeavor — AI-Native Creative Agency",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-09",
+      "file": "old:deck/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/demos/alice-terminal.html",
+      "title": "Alice Terminal Theme - Developer Dashboard",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:demos/alice-terminal.html",
+      "notes": ""
+    },
+    {
+      "path": "/demos/alice.html",
+      "title": "Alice Design System - Storybook Demo",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:demos/alice.html",
+      "notes": ""
+    },
+    {
+      "path": "/demos/gold-options.html",
+      "title": "Liquid Gold Hero Options",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:demos/gold-options.html",
+      "notes": ""
+    },
+    {
+      "path": "/dither-demo/",
+      "title": "Dither Repulsion",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:dither-demo/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/estimator-waitlist/",
+      "title": "Forma — Hospitality Procurement, Priced with Precision",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:estimator-waitlist/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-beliefs.html",
+      "title": "Back Your Beliefs — eToro Concept D",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-beliefs.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/",
+      "title": "eToro — Competitive Landscape · CE Visual Research",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/_template/brief.html",
+      "title": "[Brand Name] — Competitor Brief | CE for eToro",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/_template/brief.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/_template/competition-page-v2.html",
+      "title": "[BRAND_NAME] — Visual Competitive Analysis",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/_template/competition-page-v2.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/cashapp/",
+      "title": "Cash App — Visual Competitive Analysis",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/cashapp/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/cashapp/brief.html",
+      "title": "Cash App — Competitor Brief | CE for eToro",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/cashapp/brief.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/charles-schwab/",
+      "title": "Charles Schwab — Visual Competitive Analysis",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/charles-schwab/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/charles-schwab/curate/",
+      "title": "Charles Schwab — Curation",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/charles-schwab/curate/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/coinbase-live/",
+      "title": "Coinbase — Visual Competitive Analysis",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/coinbase-live/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/coinbase/",
+      "title": "Coinbase — Visual Competitive Analysis",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/coinbase/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/coinbase/curate/",
+      "title": "Coinbase — Curation",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/coinbase/curate/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/curate/",
+      "title": "eToro Competition — Curation",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/curate/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/etoro/",
+      "title": "eToro — Brand Self-Assessment",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/etoro/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/evidence-library/",
+      "title": "Brand Strategic Territories — Evidence Library",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/evidence-library/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/fidelity/",
+      "title": "Fidelity Investments — Visual Competitive Analysis",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/fidelity/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/fidelity/curate/",
+      "title": "Fidelity — Curation",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/fidelity/curate/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/gallery/",
+      "title": "Competition Image Gallery",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/gallery/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/goldman-marcus/",
+      "title": "Goldman Sachs / Marcus — Visual Competitive Analysis",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/goldman-marcus/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/goldman-marcus/curate/",
+      "title": "Goldman Marcus — Curation",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/goldman-marcus/curate/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/ig-group/",
+      "title": "IG Group — Visual Competitive Analysis",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/ig-group/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/ig-group/curate/",
+      "title": "Ig Group — Curation",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/ig-group/curate/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/interactive-brokers/",
+      "title": "Interactive Brokers — Visual Competitive Analysis",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/interactive-brokers/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/interactive-brokers/curate/",
+      "title": "Interactive Brokers — Curation",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/interactive-brokers/curate/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/monzo/",
+      "title": "Monzo — Visual Competitive Analysis",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/monzo/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/monzo/curate/",
+      "title": "Monzo — Curation",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/monzo/curate/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/no-bull/",
+      "title": "No Bull. — eToro Brand Strategy Thesis",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/no-bull/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/plus500/",
+      "title": "Plus500 — Visual Competitive Analysis",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/plus500/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/revolut-live/",
+      "title": "Revolut — Visual Competitive Analysis",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/revolut-live/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/revolut-v2/",
+      "title": "Revolut — CE Competitive Analysis",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/revolut-v2/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/revolut/",
+      "title": "Revolut — Visual Competitive Analysis",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/revolut/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/revolut/curate/",
+      "title": "Revolut — Curation",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/revolut/curate/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/robinhood-live/",
+      "title": "Robinhood — Visual Competitive Analysis",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/robinhood-live/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/robinhood/",
+      "title": "Robinhood — Visual Competitive Analysis",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/robinhood/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/stripe/",
+      "title": "Stripe — Visual Competitive Analysis",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/stripe/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/stripe/curate/",
+      "title": "Stripe — Curation",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/stripe/curate/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/trade-republic/",
+      "title": "Trade Republic — Visual Competitive Analysis",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/trade-republic/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/trade-republic/curate/",
+      "title": "Trade Republic — Curation",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/trade-republic/curate/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/trading-212/",
+      "title": "Trading 212 — Visual Competitive Analysis",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/trading-212/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/trading-212/curate/",
+      "title": "Trading 212 — Curation",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/trading-212/curate/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/trading-212/curator.html",
+      "title": "Trading 212 — Asset Curator",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/trading-212/curator.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/trading-212/gallery.html",
+      "title": "Trading 212 — Image Curation",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/trading-212/gallery.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/vanguard/",
+      "title": "Vanguard — Visual Competitive Analysis",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/vanguard/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/vanguard/curate/",
+      "title": "Vanguard — Curation",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/vanguard/curate/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/venmo/",
+      "title": "Venmo — Visual Competitive Analysis",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/venmo/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/venmo/curate/",
+      "title": "Venmo — Curation",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/venmo/curate/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/wise/",
+      "title": "Wise — Visual Competitive Analysis",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/wise/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-competition/wise/curate/",
+      "title": "Wise — Curation",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-competition/wise/curate/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-kickoff-fixed.html",
+      "title": "eToro Brand Transformation — Kick-off | Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-kickoff-fixed.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-kickoff.html",
+      "title": "eToro Brand Transformation — Kick-off | Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-kickoff.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-longview.html",
+      "title": "eToro — Patience You Can See",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-longview.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-open.html",
+      "title": "Invest in the Open — eToro Brand Concept",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-open.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-people.html",
+      "title": "eToro — The Intelligence is Human",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-people.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-portal-public/",
+      "title": "eToro — Project Portal · CE Visual Research",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-portal-public/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-portal/",
+      "title": "eToro — Project Portal · CE Visual Research",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-portal/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-strategy-provenance-ce.html",
+      "title": "eToro Strategy Provenance — Where Every Idea Came From",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-strategy-provenance-ce.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-strategy-review.html",
+      "title": "eToro Strategy Deck Review — Chapter by Chapter",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-strategy-review.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-strategy-white.html",
+      "title": "eToro Brand Strategy — Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-strategy-white.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-strategy.html",
+      "title": "eToro | Brand Strategy | Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-strategy.html",
+      "notes": ""
+    },
+    {
+      "path": "/etoro-through.html",
+      "title": "eToro — Built Through Everything",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:etoro-through.html",
+      "notes": ""
+    },
+    {
+      "path": "/ffood/msa/",
+      "title": "Curious Endeavor × FFoodi — Master Services Agreement",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:ffood/msa/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/figma-plugin/ui.html",
+      "title": "CE Bridge",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:figma-plugin/ui.html",
+      "notes": ""
+    },
+    {
+      "path": "/figma-remote-plugin/ui.html",
+      "title": "CE Bridge",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:figma-remote-plugin/ui.html",
+      "notes": ""
+    },
+    {
+      "path": "/figma-story/",
+      "title": "The Subject Matter Expert — Assaf Dagan × Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:figma-story/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/fiona/",
+      "title": "Mademoiselle Fiona | Brand Review & Strategy | Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:fiona/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/flowrx/",
+      "title": "FlowRX | Brand Strategy | Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:flowrx/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/flowrx/v1/",
+      "title": "FlowRX — Brand Strategy | Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:flowrx/v1/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/future-forward-generator/",
+      "title": "Asset Generator — Future Forward 2026",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:future-forward-generator/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/future-forward-generator/index-v2.html",
+      "title": "Future Forward 2026 — Asset Generator",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:future-forward-generator/index-v2.html",
+      "notes": ""
+    },
+    {
+      "path": "/future-forward-generator/test-images/",
+      "title": "FF Astronaut Tests",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:future-forward-generator/test-images/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/grid/",
+      "title": "Grid Health | Brand Strategy | Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:grid/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/grid/research-v2/",
+      "title": "Grid Health — Visual Strategy Research | Curious Endeavor",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:grid/research-v2/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/grid/research/",
+      "title": "Grid Health — Visual Research | Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:grid/research/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/grid/research/stripe-atlas-test.html",
+      "title": "Stripe Atlas Visual Brand Analysis | CE",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:grid/research/stripe-atlas-test.html",
+      "notes": ""
+    },
+    {
+      "path": "/grid/v2-archive/",
+      "title": "Grid Health — Brand Strategy | Curious Endeavor",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:grid/v2-archive/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/grid/v2-archive/hero-mockup.html",
+      "title": "Grid Health — Hero Mockup",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:grid/v2-archive/hero-mockup.html",
+      "notes": ""
+    },
+    {
+      "path": "/grid/v3-archive/",
+      "title": "Grid Health | Brand Strategy | Curious Endeavor",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:grid/v3-archive/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/hello.html",
+      "title": "Hello World",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:hello.html",
+      "notes": ""
+    },
+    {
+      "path": "/hopshop/review/",
+      "title": "HopShop Live — Design & Competitive Review",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:hopshop/review/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/hud/",
+      "title": "Hud | Brand Strategy | Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:hud/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/hud/label-options/",
+      "title": "Label Options — curious endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:hud/label-options/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/hud/prototype/",
+      "title": "Hud | Brand Strategy | Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:hud/prototype/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/hud/v2/",
+      "title": "Hud | Brand Strategy | Curious Endeavor",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:hud/v2/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/hud/visuals/options/",
+      "title": "Hud Brand Images — Pick Options",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:hud/visuals/options/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/hud/wireframe/",
+      "title": "Hud — Landing Page Wireframe",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:hud/wireframe/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/hud/wireframe/v2.html",
+      "title": "Hud — Wireframe v2",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:hud/wireframe/v2.html",
+      "notes": ""
+    },
+    {
+      "path": "/hud/wireframe/v3.html",
+      "title": "Hud — Wireframe v3 · Detect → Fix",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:hud/wireframe/v3.html",
+      "notes": ""
+    },
+    {
+      "path": "/images/chrome-extension/options.html",
+      "title": "OpenClaw Browser Relay",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:images/chrome-extension/options.html",
+      "notes": ""
+    },
+    {
+      "path": "/images/claude-plugin-v1/ui.html",
+      "title": "Claude for Figma",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:images/claude-plugin-v1/ui.html",
+      "notes": ""
+    },
+    {
+      "path": "/images/sow-etoro.html",
+      "title": "Curious Endeavor - Statement of Work",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:images/sow-etoro.html",
+      "notes": ""
+    },
+    {
+      "path": "/images/ui.html",
+      "title": "Claude MCP Plugin",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:images/ui.html",
+      "notes": ""
+    },
+    {
+      "path": "/jack-wolfskin-research/jack-wolfskin-visual-research.html",
+      "title": "Jack Wolfskin — Visual Competitive Analysis · CE",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:jack-wolfskin-research/jack-wolfskin-visual-research.html",
+      "notes": ""
+    },
+    {
+      "path": "/jonathan/",
+      "title": "Happy Birthday Jonathan",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:jonathan/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/kittoro-test.html",
+      "title": "",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:kittoro-test.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/",
+      "title": "Lobster",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/fonts/Nohemi/Web-PS/Nohemi-Black.html",
+      "title": "Nohemi Black - Web Font Specimen",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/fonts/Nohemi/Web-PS/Nohemi-Black.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/fonts/Nohemi/Web-PS/Nohemi-Bold.html",
+      "title": "Nohemi Bold - Web Font Specimen",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/fonts/Nohemi/Web-PS/Nohemi-Bold.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/fonts/Nohemi/Web-PS/Nohemi-ExtraBold.html",
+      "title": "Nohemi Extra Bold - Web Font Specimen",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/fonts/Nohemi/Web-PS/Nohemi-ExtraBold.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/fonts/Nohemi/Web-PS/Nohemi-ExtraLight.html",
+      "title": "Nohemi Extra Light - Web Font Specimen",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/fonts/Nohemi/Web-PS/Nohemi-ExtraLight.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/fonts/Nohemi/Web-PS/Nohemi-Light.html",
+      "title": "Nohemi Light - Web Font Specimen",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/fonts/Nohemi/Web-PS/Nohemi-Light.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/fonts/Nohemi/Web-PS/Nohemi-Medium.html",
+      "title": "Nohemi Medium - Web Font Specimen",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/fonts/Nohemi/Web-PS/Nohemi-Medium.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/fonts/Nohemi/Web-PS/Nohemi-Regular.html",
+      "title": "Nohemi Regular - Web Font Specimen",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/fonts/Nohemi/Web-PS/Nohemi-Regular.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/fonts/Nohemi/Web-PS/Nohemi-SemiBold.html",
+      "title": "Nohemi Semi Bold - Web Font Specimen",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/fonts/Nohemi/Web-PS/Nohemi-SemiBold.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/fonts/Nohemi/Web-PS/Nohemi-Thin.html",
+      "title": "Nohemi Thin - Web Font Specimen",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/fonts/Nohemi/Web-PS/Nohemi-Thin.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/fonts/Nohemi/Web-TT/Nohemi-Black.html",
+      "title": "Nohemi Black - Web Font Specimen",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/fonts/Nohemi/Web-TT/Nohemi-Black.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/fonts/Nohemi/Web-TT/Nohemi-Bold.html",
+      "title": "Nohemi Bold - Web Font Specimen",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/fonts/Nohemi/Web-TT/Nohemi-Bold.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/fonts/Nohemi/Web-TT/Nohemi-ExtraBold.html",
+      "title": "Nohemi Extra Bold - Web Font Specimen",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/fonts/Nohemi/Web-TT/Nohemi-ExtraBold.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/fonts/Nohemi/Web-TT/Nohemi-ExtraLight.html",
+      "title": "Nohemi Extra Light - Web Font Specimen",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/fonts/Nohemi/Web-TT/Nohemi-ExtraLight.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/fonts/Nohemi/Web-TT/Nohemi-Light.html",
+      "title": "Nohemi Light - Web Font Specimen",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/fonts/Nohemi/Web-TT/Nohemi-Light.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/fonts/Nohemi/Web-TT/Nohemi-Medium.html",
+      "title": "Nohemi Medium - Web Font Specimen",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/fonts/Nohemi/Web-TT/Nohemi-Medium.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/fonts/Nohemi/Web-TT/Nohemi-Regular.html",
+      "title": "Nohemi Regular - Web Font Specimen",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/fonts/Nohemi/Web-TT/Nohemi-Regular.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/fonts/Nohemi/Web-TT/Nohemi-SemiBold.html",
+      "title": "Nohemi Semi Bold - Web Font Specimen",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/fonts/Nohemi/Web-TT/Nohemi-SemiBold.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/fonts/Nohemi/Web-TT/Nohemi-Thin.html",
+      "title": "Nohemi Thin - Web Font Specimen",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/fonts/Nohemi/Web-TT/Nohemi-Thin.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/refs.html",
+      "title": "Lobster — Visual References",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/refs.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/scroll-test.html",
+      "title": "Scroll Test",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/scroll-test.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/strategy-v2/",
+      "title": "Lobster | Brand Strategy | Curious Endeavor",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/strategy-v2/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/strategy/",
+      "title": "Lobster — Brand Strategy | Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/strategy/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/styleguide.html",
+      "title": "Lobster — Brand Styleguide",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/styleguide.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/taste.html",
+      "title": "Taste Board — Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/taste.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/v2.html",
+      "title": "Lobster v2",
+      "tag": "archived",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/v2.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/v3.html",
+      "title": "Lobster v2",
+      "tag": "archived",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/v3.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/v4.html",
+      "title": "Lobster v2",
+      "tag": "archived",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/v4.html",
+      "notes": ""
+    },
+    {
+      "path": "/lobster/v5.html",
+      "title": "Lobster — Your OpenClaw Agent in Your Meetings",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:lobster/v5.html",
+      "notes": ""
+    },
+    {
+      "path": "/marquez-comparison.html",
+      "title": "Rua Marquês de Fronteira 131 — Renovation Comparison",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:marquez-comparison.html",
+      "notes": ""
+    },
+    {
+      "path": "/metaroom-pitch/",
+      "title": "Curious Endeavor — For Metaroom",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:metaroom-pitch/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/mission-mode-refs.html",
+      "title": "Mission Mode — Real Reference Images",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:mission-mode-refs.html",
+      "notes": ""
+    },
+    {
+      "path": "/mission-mode-styles.html",
+      "title": "Mission Mode — Illustration Style Research",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:mission-mode-styles.html",
+      "notes": ""
+    },
+    {
+      "path": "/mission-mode.html",
+      "title": "Mission Mode",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:mission-mode.html",
+      "notes": ""
+    },
+    {
+      "path": "/mission-refs/",
+      "title": "Mission Mode — Style Reference",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:mission-refs/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/mission/",
+      "title": "Mission | Brand Strategy | Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:mission/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/mission/v2/",
+      "title": "Mission | Brand Strategy | Curious Endeavor",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:mission/v2/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/mobiko-research/mobiko-visual-research.html",
+      "title": "Mobiko — Visual Competitive Analysis · CE",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:mobiko-research/mobiko-visual-research.html",
+      "notes": ""
+    },
+    {
+      "path": "/newsletter-1.html",
+      "title": "The Brand Gap — Issue #1",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:newsletter-1.html",
+      "notes": ""
+    },
+    {
+      "path": "/nitay-prototype/",
+      "title": "Nitay Dagan — Creative Director",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:nitay-prototype/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/nitay-strategy/",
+      "title": "Nitay Dagan | Website Strategy | Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:nitay-strategy/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/nitay/ad1/",
+      "title": "Ad 1 — Visual Reference Board",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:nitay/ad1/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/nitay/deck/",
+      "title": "THE GUM FILES — Director's Visual Deck",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:nitay/deck/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/no-bull/brand-platform-v2.html",
+      "title": "Know Better — eToro Brand Platform v2",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:no-bull/brand-platform-v2.html",
+      "notes": ""
+    },
+    {
+      "path": "/no-bull/brand-platform-v3.html",
+      "title": "Know Better — eToro Brand Platform v3",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:no-bull/brand-platform-v3.html",
+      "notes": ""
+    },
+    {
+      "path": "/no-bull/brand-platform.html",
+      "title": "eToro Brand Platform — Know Better",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:no-bull/brand-platform.html",
+      "notes": ""
+    },
+    {
+      "path": "/noom-before-after/after.html",
+      "title": "Noom — Navigating a path to better health",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:noom-before-after/after.html",
+      "notes": ""
+    },
+    {
+      "path": "/noom-before-after/before.html",
+      "title": "Noom — Meds to lose it. Noom to keep it off.",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:noom-before-after/before.html",
+      "notes": ""
+    },
+    {
+      "path": "/noom-before-after/report.html",
+      "title": "Noom: Before & After — Brand Gap Analysis",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:noom-before-after/report.html",
+      "notes": ""
+    },
+    {
+      "path": "/notion-brief-test/",
+      "title": "Notion — Competitive Intelligence",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:notion-brief-test/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/notion-brief-test/brief.html",
+      "title": "Notion — Competitor Brief | CE",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:notion-brief-test/brief.html",
+      "notes": ""
+    },
+    {
+      "path": "/nurami/",
+      "title": "Nurami — Brand Strategy Critique & Recommendations | Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:nurami/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/offering/",
+      "title": "Offerings — Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:offering/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/palais-des-thes/",
+      "title": "Palais des Thés",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:palais-des-thes/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/palais-des-thes/board.html",
+      "title": "Palais des Thés — Dashboard Redesign",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:palais-des-thes/board.html",
+      "notes": ""
+    },
+    {
+      "path": "/palais-des-thes/spec.html",
+      "title": "CamelliaOS Dashboard — Engineering Spec",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:palais-des-thes/spec.html",
+      "notes": ""
+    },
+    {
+      "path": "/phat-foods/",
+      "title": "Phat Foods",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:phat-foods/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/phat-foods/board.html",
+      "title": "Phat Foods — Brand Inspiration",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:phat-foods/board.html",
+      "notes": ""
+    },
+    {
+      "path": "/phat-foods/brand-thesis.html",
+      "title": "PHAT Foods Brand Thesis — Logo Brief",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:phat-foods/brand-thesis.html",
+      "notes": ""
+    },
+    {
+      "path": "/phat-foods/logo-strategy.html",
+      "title": "Logo Strategy Case Study — PHAT Foods",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:phat-foods/logo-strategy.html",
+      "notes": ""
+    },
+    {
+      "path": "/phat-foods/microalgae-golden-json.html",
+      "title": "Microalgae — Golden JSON Style",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:phat-foods/microalgae-golden-json.html",
+      "notes": ""
+    },
+    {
+      "path": "/phat-foods/naming-study-v2.html",
+      "title": "Naming Study v2 — Phat Foods Rebrand",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:phat-foods/naming-study-v2.html",
+      "notes": ""
+    },
+    {
+      "path": "/phat-foods/naming-study.html",
+      "title": "Naming Study — Phat Foods Rebrand",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:phat-foods/naming-study.html",
+      "notes": ""
+    },
+    {
+      "path": "/phat-foods/naming.html",
+      "title": "Naming Options — Phat Foods Rebrand",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:phat-foods/naming.html",
+      "notes": ""
+    },
+    {
+      "path": "/phat-foods/strategy-board.html",
+      "title": "Phat Foods - Strategy Board",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:phat-foods/strategy-board.html",
+      "notes": ""
+    },
+    {
+      "path": "/phat-foods/taste-brand-analysis.html",
+      "title": "PHAT Foods — Logo Direction from Taste Board",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:phat-foods/taste-brand-analysis.html",
+      "notes": ""
+    },
+    {
+      "path": "/phat-slides/",
+      "title": "PHAT Foods — CEO Deck",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:phat-slides/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/phat-slides/previews/style-a.html",
+      "title": "PHAT Foods — Style A: Tectonic",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:phat-slides/previews/style-a.html",
+      "notes": ""
+    },
+    {
+      "path": "/phat-slides/previews/style-b.html",
+      "title": "PHAT Foods — Style B: Deep Science",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:phat-slides/previews/style-b.html",
+      "notes": ""
+    },
+    {
+      "path": "/phat-slides/previews/style-c.html",
+      "title": "PHAT Foods — Style C: Catalyst",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:phat-slides/previews/style-c.html",
+      "notes": ""
+    },
+    {
+      "path": "/porsche/",
+      "title": "Curious Endeavor × Porsche",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:porsche/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/products/",
+      "title": "Products — Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:products/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/products/brand-audit-checklist.html",
+      "title": "The Complete Brand Audit Checklist — Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:products/brand-audit-checklist.html",
+      "notes": ""
+    },
+    {
+      "path": "/products/brand-positioning-canvas.html",
+      "title": "Brand Positioning Canvas™ — Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:products/brand-positioning-canvas.html",
+      "notes": ""
+    },
+    {
+      "path": "/products/ce-lite-research/",
+      "title": "CE-Lite Strategy Intelligence | Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:products/ce-lite-research/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/products/competitive-intel-sample.html",
+      "title": "Sample: Alternative Dairy &amp; Food Tech — Competitive Intelligence — Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:products/competitive-intel-sample.html",
+      "notes": ""
+    },
+    {
+      "path": "/products/competitor-analysis-template.html",
+      "title": "Competitive Analysis Framework — Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:products/competitor-analysis-template.html",
+      "notes": ""
+    },
+    {
+      "path": "/products/naming-guide.html",
+      "title": "The Startup Naming Playbook — Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:products/naming-guide.html",
+      "notes": ""
+    },
+    {
+      "path": "/products/pitch-deck-guide.html",
+      "title": "The 12-Slide Pitch Deck That Gets Meetings — Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:products/pitch-deck-guide.html",
+      "notes": ""
+    },
+    {
+      "path": "/projects.html",
+      "title": "Projects — Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:projects.html",
+      "notes": ""
+    },
+    {
+      "path": "/projects/",
+      "title": "Projects — Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:projects/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/projects/cropster/",
+      "title": "Cropster — CE Project Hub",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:projects/cropster/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/projects/olevia/",
+      "title": "Redirecting...",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:projects/olevia/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/projects/olevia/brand-book.html",
+      "title": "Creative Engine - Brand Book",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:projects/olevia/brand-book.html",
+      "notes": ""
+    },
+    {
+      "path": "/projects/Olevia/Brandbook/",
+      "title": "Olevia Brand Book — Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:projects/Olevia/Brandbook/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/projects/Olevia/Brandbook/components.html",
+      "title": "Olevia — Brand Book Component Patterns",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:projects/Olevia/Brandbook/components.html",
+      "notes": ""
+    },
+    {
+      "path": "/projects/Olevia/Brandbook/references.html",
+      "title": "Olevia — Brand Book Reference Study",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:projects/Olevia/Brandbook/references.html",
+      "notes": ""
+    },
+    {
+      "path": "/projects/Olevia/Brandbook/structure.html",
+      "title": "Olevia Brandbook — Page Structure",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:projects/Olevia/Brandbook/structure.html",
+      "notes": ""
+    },
+    {
+      "path": "/projects/Olevia/Brandbook/v2.html",
+      "title": "Olevia Brand Book — Curious Endeavor",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:projects/Olevia/Brandbook/v2.html",
+      "notes": ""
+    },
+    {
+      "path": "/projects/Olevia/Brandbook/v3.html",
+      "title": "Olevia — Brand Book",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:projects/Olevia/Brandbook/v3.html",
+      "notes": ""
+    },
+    {
+      "path": "/projects/Olevia/Brandbook/v4.html",
+      "title": "Olevia — Brand Book",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:projects/Olevia/Brandbook/v4.html",
+      "notes": ""
+    },
+    {
+      "path": "/projects/olevia/olive-top.html",
+      "title": "Redirecting...",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:projects/olevia/olive-top.html",
+      "notes": ""
+    },
+    {
+      "path": "/projects/Olevia/olive-top.html",
+      "title": "Olive - Premium Olive Oil",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:projects/Olevia/olive-top.html",
+      "notes": ""
+    },
+    {
+      "path": "/services.html",
+      "title": "Strategy Tools — Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:services.html",
+      "notes": ""
+    },
+    {
+      "path": "/signal.html",
+      "title": "CE Signal — Research → Post",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:signal.html",
+      "notes": ""
+    },
+    {
+      "path": "/sitemap/",
+      "title": "CE — Site Map",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-09",
+      "file": "new:sitemap/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/skill-demo/v1/",
+      "title": "Notion — Competitive Analysis",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:skill-demo/v1/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/skill-demo/v2/",
+      "title": "Notion — Visual Competitive Analysis",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:skill-demo/v2/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/skills/",
+      "title": "Skills Registry — Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:skills/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/skills/creative-visual-research/brand-page-template.html",
+      "title": "[Competitor Name] — Visual Competitive Analysis",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:skills/creative-visual-research/brand-page-template.html",
+      "notes": ""
+    },
+    {
+      "path": "/social-creator.html",
+      "title": "Curious Endeavor — Post Creator",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:social-creator.html",
+      "notes": ""
+    },
+    {
+      "path": "/social-refs.html",
+      "title": "Social References — Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:social-refs.html",
+      "notes": ""
+    },
+    {
+      "path": "/social.html",
+      "title": "Curious Endeavor — LinkedIn Brand Guidelines",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:social.html",
+      "notes": ""
+    },
+    {
+      "path": "/sources/",
+      "title": "Qualified Sources | Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:sources/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/sow-etoro.html",
+      "title": "Curious Endeavor - Statement of Work",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:sow-etoro.html",
+      "notes": ""
+    },
+    {
+      "path": "/sow-ffood.html",
+      "title": "Curious Endeavor × FFoodi — Statement of Work",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:sow-ffood.html",
+      "notes": ""
+    },
+    {
+      "path": "/spoken-language-staging/",
+      "title": "Spoken Language Learning - Video Games",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:spoken-language-staging/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/spoken-language-v2/",
+      "title": "Spoken Language Learning",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:spoken-language-v2/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/spoken-new/",
+      "title": "Spoken Method",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:spoken-new/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/spoken-storyboard.html",
+      "title": "Spoken Institute — Storyboard",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:spoken-storyboard.html",
+      "notes": ""
+    },
+    {
+      "path": "/spoken-v2/",
+      "title": "Spoken — Language V2",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:spoken-v2/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/spoken-v3/",
+      "title": "Spoken — Language V3",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:spoken-v3/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/spoken-v4/",
+      "title": "Spoken — Language V4",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:spoken-v4/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/storyboard-spoken.html",
+      "title": "Spoken Institute — Storyboard",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:storyboard-spoken.html",
+      "notes": ""
+    },
+    {
+      "path": "/strategy/intake/",
+      "title": "eToro Brand Strategy — CE Intake",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:strategy/intake/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/styleguide.html",
+      "title": "Curious Endeavor — Design Styleguide",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:styleguide.html",
+      "notes": ""
+    },
+    {
+      "path": "/talk/",
+      "title": "How I Use OpenClaw — Assaf Dagan",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:talk/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/taste/",
+      "title": "Creative Intelligence — Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:taste/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/taste/prd/",
+      "title": "Taste Board PRD — Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:taste/prd/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/taste/prototype/",
+      "title": "Taste Board — Prototype",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:taste/prototype/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/taste/prototype/feed-flow/",
+      "title": "Trend Radar → Taste Board — Feed Flow",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:taste/prototype/feed-flow/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/team8-landing/styleguide.html",
+      "title": "Curious Endeavor — Design Styleguide",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:team8-landing/styleguide.html",
+      "notes": ""
+    },
+    {
+      "path": "/team8-landing/wireframe.html",
+      "title": "Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:team8-landing/wireframe.html",
+      "notes": ""
+    },
+    {
+      "path": "/team8/",
+      "title": "Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:team8/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/visual-research/collins/",
+      "title": "Collins — Visual Research | CE Methodology",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:visual-research/collins/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/visual-research/comparison/",
+      "title": "Visual Research Skill — Before vs After Autoresearch",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:visual-research/comparison/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/visual-research/flowrx-alliance-network/",
+      "title": "FlowRX Direction: Alliance Network",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:visual-research/flowrx-alliance-network/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/visual-research/flowrx-professional-resistance/",
+      "title": "FlowRX Direction: Professional Resistance",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:visual-research/flowrx-professional-resistance/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/visual-research/mission-illustration-styles/",
+      "title": "Mission: Illustration Direction — Playful Challenger",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:visual-research/mission-illustration-styles/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/visual-research/mission-playful-challenger/",
+      "title": "Mission Direction 3: Playful Challenger",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:visual-research/mission-playful-challenger/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/visual-research/mission-v2/",
+      "title": "Mission Visual Research — Agency for Children",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:visual-research/mission-v2/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/visual-research/mission-v3/",
+      "title": "Mission Visual Research — Deep Analysis",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:visual-research/mission-v3/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/visual-research/mission-v4/",
+      "title": "Mission Visual Directions — Moodboard",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:visual-research/mission-v4/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/visual-research/mission/",
+      "title": "Mission Visual Research Board — Curious Endeavor",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:visual-research/mission/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/visual-research/proof-of-concept/",
+      "title": "Visual Direction Board — Premium Children's Education Brand",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:visual-research/proof-of-concept/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/wexelerate/",
+      "title": "Curious Endeavor — AI-Native Creative Agency",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-09",
+      "file": "old:wexelerate/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/wexelerate/builder/",
+      "title": "Asset Generator — Future Forward 2026",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:wexelerate/builder/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/wexelerate/builder/index-v2.html",
+      "title": "Future Forward 2026 — Asset Generator",
+      "tag": "draft",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:wexelerate/builder/index-v2.html",
+      "notes": ""
+    },
+    {
+      "path": "/white-space-strategy/",
+      "title": "White Space — AI Strategy / Aytan & Menash Call",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:white-space-strategy/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/wix/",
+      "title": "Curious Endeavor — Show & Tell",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:wix/index.html",
+      "notes": ""
+    },
+    {
+      "path": "/wix/v-a.html",
+      "title": "Curious Endeavor — Show & Tell",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:wix/v-a.html",
+      "notes": ""
+    },
+    {
+      "path": "/wix/v-b.html",
+      "title": "Curious Endeavor — Show & Tell",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:wix/v-b.html",
+      "notes": ""
+    },
+    {
+      "path": "/wix/v-c.html",
+      "title": "Curious Endeavor — Show & Tell",
+      "tag": "live",
+      "usesHero": false,
+      "modified": "2026-04-07",
+      "file": "old:wix/v-c.html",
+      "notes": ""
+    }
+  ]
+}

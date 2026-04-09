@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curious Endeavor</title>
+  <meta name="description" content="Curious Endeavor — strategy to execution. Faster than hiring, cheaper than agencies.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Curious Endeavor">
+  <meta property="og:description" content="Strategy to execution. Faster than hiring, cheaper than agencies.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://curiousendeavor.com/">
+
+  <link rel="preconnect" href="https://use.typekit.net">
+  <link rel="stylesheet" href="https://use.typekit.net/ffj8sbd.css">
+  <link rel="stylesheet" href="/components/ce-hero/ce-hero.css">
+
+  <style>
+    :root {
+      --red:    #cc0000;
+      --black:  #1a1a1a;
+      --grey:   #666;
+      --border: #e8e8e8;
+      --bg:     #fff;
+      --bar-h:  68px;
+      --font-serif: 'larken', 'Times New Roman', serif;
+      --font-sans:  'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      -webkit-font-smoothing: antialiased;
+      background: var(--bg);
+      font-family: var(--font-sans);
+      color: var(--black);
+    }
+
+    /* ── Home layout: full-bleed hero above a footer bar ── */
+    .home-hero {
+      --ce-hero-height: calc(100vh - var(--bar-h));
+    }
+
+    .home-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: var(--bar-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(20px, 3vw, 48px);
+      background: #fff;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--grey);
+      z-index: 10;
+    }
+    .home-bar a {
+      color: var(--black);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .home-bar a:hover { color: var(--red); }
+    .home-bar .sep { color: var(--border); margin: 0 8px; }
+
+    /* Push the hero up so the bar doesn't overlap on phones where hero is auto-height */
+    @media (max-width: 540px) {
+      body { padding-bottom: var(--bar-h); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       Canonical CE hero — ce-hero component
+       ═══════════════════════════════════════════ -->
+  <section class="ce-hero home-hero"
+           data-hero-title='curious endeavor.'
+           data-hero-label="Strategy &middot; Creative &middot; Production"
+           data-hero-pool="default">
+  </section>
+
+  <!-- Bottom bar — nav + contact -->
+  <footer class="home-bar" role="contentinfo">
+    <a href="/deck/">The deck</a>
+    <span class="sep">·</span>
+    <a href="/essays/subject-matter-expert/">Essay</a>
+    <span class="sep">·</span>
+    <a href="mailto:assaf@curiousendeavor.com">assaf@curiousendeavor.com</a>
+  </footer>
+
+  <script src="/components/ce-hero/ce-hero.js" defer></script>
+</body>
+</html>

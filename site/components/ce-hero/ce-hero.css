@@ -1,0 +1,185 @@
+/* ============================================================
+   ce-hero — canonical Curious Endeavor hero component
+   ============================================================
+
+   Usage:
+     <link rel="stylesheet" href="/components/ce-hero/ce-hero.css">
+     <section class="ce-hero"
+              data-hero-title='Your creative department, <em>minus the department</em>.'
+              data-hero-label="Pitch · April 2026">
+     </section>
+     <script src="/components/ce-hero/ce-hero.js" defer></script>
+
+   Notes:
+   - All styles are namespaced under .ce-hero to avoid page collisions.
+   - JS builds the inner 9-cell grid + injects title/label at runtime.
+   - Layout: 3x3 grid desktop, fluid 3x3 tablet, brick-wall phone.
+   - The component assumes --ce-red, --ce-black, --ce-grey, --ce-bg,
+     --ce-border, --ce-font-serif, --ce-font-sans are defined on :root.
+     Falls back to CE's standard palette when they aren't.
+   ============================================================ */
+
+.ce-hero {
+  --ce-red:        var(--red, #cc0000);
+  --ce-black:      var(--black, #1a1a1a);
+  --ce-grey:       var(--grey, #666);
+  --ce-bg:         var(--bg, #fff);
+  --ce-bg-alt:     var(--bg-alt, #f7f5f2);
+  --ce-border:     var(--border, #e8e8e8);
+  --ce-muted:      var(--muted, #999);
+  --ce-font-serif: var(--font-serif, 'larken', 'Times New Roman', serif);
+  --ce-font-sans:  var(--font-sans, 'Inter', -apple-system, sans-serif);
+
+  position: relative;
+  width: 100%;
+  height: var(--ce-hero-height, 100vh);
+  overflow: hidden;
+  background: var(--ce-bg);
+  box-sizing: border-box;
+}
+
+.ce-hero *, .ce-hero *::before, .ce-hero *::after { box-sizing: border-box; }
+
+/* ── Grid — 3×3 responsive, centered, bleeds slightly on desktop ── */
+.ce-hero-grid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% * 1.06);
+  height: calc(100% * 1.06);
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: clamp(8px, 1.2vw, 20px);
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+.ce-hero-grid.is-loaded { opacity: 1; }
+
+/* ── Cell ── */
+.ce-hero-cell {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--ce-bg-alt);
+}
+
+/* Crossfade layers inside image cells */
+.ce-hero-cell .ce-hero-layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1800ms ease-in-out;
+}
+.ce-hero-cell .ce-hero-layer.is-a { opacity: 1; }
+.ce-hero-cell .ce-hero-layer.is-b { opacity: 0; }
+
+/* ── Center cell (text) ── */
+.ce-hero-text-cell {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(16px, 2.5vw, 40px);
+  gap: 10px;
+}
+.ce-hero-title {
+  font-family: var(--ce-font-serif);
+  font-size: clamp(16px, 2.2vw, 32px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--ce-black);
+  margin: 0;
+}
+.ce-hero-title em {
+  font-style: normal;
+  color: var(--ce-red);
+}
+.ce-hero-label {
+  font-family: var(--ce-font-sans);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ce-muted);
+  font-weight: 400;
+  margin-top: 4px;
+}
+.ce-hero-subtitle {
+  font-family: var(--ce-font-sans);
+  font-size: clamp(11px, 0.95vw, 14px);
+  color: var(--ce-grey);
+  line-height: 1.65;
+  max-width: 280px;
+  margin: 0;
+}
+
+/* ── Tablet — fluid 3×3 contained to viewport, no bleed ── */
+@media (max-width: 1200px) {
+  .ce-hero {
+    height: auto;
+    min-height: 100vh;
+  }
+  .ce-hero-grid {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    padding: 12px;
+  }
+  .ce-hero-title { font-size: clamp(16px, 2.8vw, 28px); }
+  .ce-hero-subtitle { font-size: clamp(11px, 1.1vw, 13px); }
+}
+
+/* ── Phone — brick-wall layout (ported from Subject Matter Expert) ── */
+@media (max-width: 540px) {
+  .ce-hero {
+    height: auto;
+    min-height: 0;
+  }
+  .ce-hero-grid {
+    width: 100%;
+    min-height: 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px 100px 100px auto 100px 100px 100px;
+    gap: 6px;
+    padding: 6px;
+  }
+  .ce-hero-cell { border-radius: 3px; }
+  /* Top block — interlocking brick pattern */
+  .ce-hero-cell.is-img:nth-child(1) { grid-column: 1; grid-row: 1 / 2; }
+  .ce-hero-cell.is-img:nth-child(2) { grid-column: 2; grid-row: 1 / 3; }
+  .ce-hero-cell.is-img:nth-child(3) { grid-column: 1; grid-row: 2 / 4; }
+  .ce-hero-cell.is-img:nth-child(4) { grid-column: 2; grid-row: 3 / 4; }
+  /* Text cell spans both columns in the middle */
+  .ce-hero-text-cell {
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+    padding: 28px 16px;
+  }
+  .ce-hero-title { font-size: 20px; }
+  .ce-hero-subtitle { font-size: 12px; max-width: none; }
+  /* Bottom block — mirror the brick */
+  .ce-hero-cell.is-img:nth-child(6) { grid-column: 1; grid-row: 5 / 6; }
+  .ce-hero-cell.is-img:nth-child(7) { grid-column: 2; grid-row: 5 / 7; }
+  .ce-hero-cell.is-img:nth-child(8) { grid-column: 1; grid-row: 6 / 8; }
+  .ce-hero-cell.is-img:nth-child(9) { grid-column: 2; grid-row: 7 / 8; }
+}
+
+/* ── Reduced motion — kill crossfade, static grid only ── */
+@media (prefers-reduced-motion: reduce) {
+  .ce-hero-grid { transition: none; }
+  .ce-hero-cell .ce-hero-layer { transition: none; }
+}
+
+/* ── Density override hooks (page can set these via inline style on .ce-hero) ──
+     --ce-hero-height: 100vh | 70vh | auto
+     --ce-hero-crossfade-ms: 1800
+============================================================ */

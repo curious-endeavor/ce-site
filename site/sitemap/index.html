@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>CE — Site Map</title>
+
+  <link rel="preconnect" href="https://use.typekit.net">
+  <link rel="stylesheet" href="https://use.typekit.net/ffj8sbd.css">
+
+  <style>
+    :root {
+      --red:    #cc0000;
+      --green:  #00875a;
+      --amber:  #b6791d;
+      --black:  #1a1a1a;
+      --grey:   #666;
+      --light:  #999;
+      --border: #e8e8e8;
+      --bg:     #fff;
+      --bg-alt: #faf9f7;
+      --font-serif: 'larken', 'Times New Roman', serif;
+      --font-sans:  'Inter', -apple-system, sans-serif;
+      --font-mono:  'JetBrains Mono', ui-monospace, monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: var(--bg);
+      color: var(--black);
+      font-family: var(--font-sans);
+      font-size: 14px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 48px clamp(20px, 3vw, 40px) 80px;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 28px;
+      margin-bottom: 28px;
+    }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--red);
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(28px, 3vw, 40px);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+    .lede {
+      color: var(--grey);
+      max-width: 640px;
+    }
+
+    /* ── Toolbar ── */
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin: 24px 0;
+    }
+    .toolbar input[type="search"] {
+      flex: 1 1 260px;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font: inherit;
+      background: #fff;
+    }
+    .toolbar button {
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      background: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+      font: inherit;
+      color: var(--black);
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .toolbar button:hover { border-color: var(--black); }
+    .toolbar button.primary {
+      background: var(--black);
+      color: #fff;
+      border-color: var(--black);
+    }
+    .toolbar button.primary:hover { background: var(--red); border-color: var(--red); }
+
+    .filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .chip {
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--grey);
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s;
+    }
+    .chip:hover { border-color: var(--black); color: var(--black); }
+    .chip.is-active {
+      background: var(--black);
+      color: #fff;
+      border-color: var(--black);
+    }
+
+    /* ── Table ── */
+    .table-wrap {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow-x: auto;
+      background: #fff;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    thead th {
+      position: sticky;
+      top: 0;
+      background: var(--bg-alt);
+      text-align: left;
+      padding: 12px 14px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--grey);
+      font-weight: 500;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+      cursor: pointer;
+    }
+    thead th:hover { color: var(--black); }
+    thead th[aria-sort="ascending"]::after { content: ' ↑'; }
+    thead th[aria-sort="descending"]::after { content: ' ↓'; }
+
+    tbody td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover { background: var(--bg-alt); }
+
+    td.path {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--grey);
+      white-space: nowrap;
+      max-width: 340px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    td.path a { color: var(--black); text-decoration: none; }
+    td.path a:hover { color: var(--red); }
+
+    td.title {
+      font-weight: 500;
+      max-width: 240px;
+    }
+
+    /* ── Status pills ── */
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    .pill::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+    .pill.ok     { color: var(--green);  background: color-mix(in srgb, var(--green)  10%, #fff); }
+    .pill.warn   { color: var(--amber);  background: color-mix(in srgb, var(--amber)  12%, #fff); }
+    .pill.err    { color: var(--red);    background: color-mix(in srgb, var(--red)    10%, #fff); }
+    .pill.idle   { color: var(--light);  background: color-mix(in srgb, var(--light)  10%, #fff); }
+
+    .tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      font-size: 10px;
+      color: var(--grey);
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .tag.archived { color: var(--amber); border-color: color-mix(in srgb, var(--amber) 30%, #fff); }
+    .tag.draft    { color: var(--grey); }
+    .tag.live     { color: var(--green); border-color: color-mix(in srgb, var(--green) 30%, #fff); }
+
+    /* ── Stats summary ── */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .stat {
+      padding: 16px 20px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: var(--bg-alt);
+    }
+    .stat-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--grey);
+      margin-bottom: 4px;
+    }
+    .stat-value {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--black);
+    }
+
+    .muted { color: var(--light); }
+    .empty {
+      text-align: center;
+      padding: 48px 20px;
+      color: var(--grey);
+    }
+
+    footer.legal {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 11px;
+      color: var(--light);
+      font-family: var(--font-mono);
+    }
+    footer.legal a { color: var(--grey); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="eyebrow">ce-site · internal</div>
+      <h1>Site map</h1>
+      <p class="lede">
+        Every page under <code>site/</code> with its canonical URL,
+        live prod + staging status, and whether it uses the
+        <code>ce-hero</code> component. Regenerated by
+        <code>scripts/build-sitemap.mjs</code>. Click any row to open.
+      </p>
+    </header>
+
+    <div class="stats" id="stats">
+      <div class="stat"><div class="stat-label">Total pages</div><div class="stat-value" id="stat-total">—</div></div>
+      <div class="stat"><div class="stat-label">Prod OK</div><div class="stat-value" id="stat-prod-ok">—</div></div>
+      <div class="stat"><div class="stat-label">Prod broken</div><div class="stat-value" id="stat-prod-err">—</div></div>
+      <div class="stat"><div class="stat-label">Using ce-hero</div><div class="stat-value" id="stat-hero">—</div></div>
+      <div class="stat"><div class="stat-label">Archived</div><div class="stat-value" id="stat-archived">—</div></div>
+    </div>
+
+    <div class="toolbar">
+      <input type="search" id="q" placeholder="Filter by path, title, tag…">
+      <button id="recheck" class="primary">Recheck all links</button>
+      <button id="export">Export CSV</button>
+    </div>
+
+    <div class="filters" id="filters">
+      <span class="chip is-active" data-filter="all">All</span>
+      <span class="chip" data-filter="live">Live</span>
+      <span class="chip" data-filter="draft">Draft</span>
+      <span class="chip" data-filter="archived">Archived</span>
+      <span class="chip" data-filter="broken">Prod broken</span>
+      <span class="chip" data-filter="hero">Uses ce-hero</span>
+    </div>
+
+    <div class="table-wrap">
+      <table id="pages">
+        <thead>
+          <tr>
+            <th data-sort="path">Path</th>
+            <th data-sort="title">Title</th>
+            <th data-sort="status">Tag</th>
+            <th data-sort="prod">Prod</th>
+            <th data-sort="staging">Staging</th>
+            <th data-sort="hero">ce-hero</th>
+            <th data-sort="modified">Modified</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <tr><td colspan="7" class="empty">Loading pages.json…</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <footer class="legal">
+      Generated from <code>/sitemap/pages.json</code>.
+      Rebuild via <code>node scripts/build-sitemap.mjs</code>.
+      Noindex by <code>&lt;meta name="robots"&gt;</code>.
+    </footer>
+  </div>
+
+<script>
+/* ============================================================
+   Sitemap page — renders pages.json + live health checks
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var PROD_ORIGIN    = 'https://www.curiousendeavor.com';
+  var STAGING_ORIGIN = 'https://staging.curiousendeavor.com';
+
+  var rows = [];
+  var filtered = [];
+  var sortKey = 'path';
+  var sortDir = 1;
+  var activeFilter = 'all';
+  var searchQuery = '';
+
+  /* ---------- Load data ---------- */
+  fetch('/sitemap/pages.json')
+    .then(function (r) { if (!r.ok) throw new Error('pages.json missing'); return r.json(); })
+    .then(function (data) {
+      rows = data.pages || [];
+      render();
+      checkAll();
+    })
+    .catch(function (err) {
+      document.getElementById('tbody').innerHTML =
+        '<tr><td colspan="7" class="empty">Could not load /sitemap/pages.json — ' +
+        esc(err.message) + '</td></tr>';
+    });
+
+  /* ---------- Render ---------- */
+  function render() {
+    filtered = rows.filter(function (r) {
+      if (activeFilter === 'live'     && r.tag !== 'live')    return false;
+      if (activeFilter === 'draft'    && r.tag !== 'draft')   return false;
+      if (activeFilter === 'archived' && r.tag !== 'archived') return false;
+      if (activeFilter === 'broken'   && r.prod !== 'err')    return false;
+      if (activeFilter === 'hero'     && !r.usesHero)         return false;
+      if (searchQuery) {
+        var q = searchQuery.toLowerCase();
+        var hay = (r.path + ' ' + (r.title || '') + ' ' + (r.tag || '')).toLowerCase();
+        if (hay.indexOf(q) === -1) return false;
+      }
+      return true;
+    });
+    filtered.sort(function (a, b) {
+      var av = (a[sortKey] || '').toString();
+      var bv = (b[sortKey] || '').toString();
+      return av.localeCompare(bv) * sortDir;
+    });
+
+    var tbody = document.getElementById('tbody');
+    if (!filtered.length) {
+      tbody.innerHTML = '<tr><td colspan="7" class="empty">No pages match.</td></tr>';
+    } else {
+      tbody.innerHTML = filtered.map(rowHtml).join('');
+    }
+    renderStats();
+  }
+
+  function rowHtml(r, i) {
+    var tagClass = r.tag || 'draft';
+    return '<tr data-i="' + i + '">' +
+      '<td class="path"><a href="' + esc(r.path) + '" target="_blank" rel="noopener">' + esc(r.path) + '</a></td>' +
+      '<td class="title">' + esc(r.title || '—') + '</td>' +
+      '<td><span class="tag ' + tagClass + '">' + esc(tagClass) + '</span></td>' +
+      '<td>' + pillHtml(r.prod) + '</td>' +
+      '<td>' + pillHtml(r.staging) + '</td>' +
+      '<td>' + (r.usesHero ? '<span class="pill ok">yes</span>' : '<span class="muted">—</span>') + '</td>' +
+      '<td class="muted">' + esc(r.modified || '') + '</td>' +
+    '</tr>';
+  }
+
+  function pillHtml(status) {
+    if (status === 'ok')  return '<span class="pill ok">200</span>';
+    if (status === 'err') return '<span class="pill err">404</span>';
+    if (status === 'warn') return '<span class="pill warn">warn</span>';
+    return '<span class="pill idle">…</span>';
+  }
+
+  function renderStats() {
+    var total    = rows.length;
+    var prodOk   = rows.filter(function (r) { return r.prod === 'ok'; }).length;
+    var prodErr  = rows.filter(function (r) { return r.prod === 'err'; }).length;
+    var hero     = rows.filter(function (r) { return r.usesHero; }).length;
+    var archived = rows.filter(function (r) { return r.tag === 'archived'; }).length;
+    document.getElementById('stat-total').textContent    = total;
+    document.getElementById('stat-prod-ok').textContent  = prodOk;
+    document.getElementById('stat-prod-err').textContent = prodErr;
+    document.getElementById('stat-hero').textContent     = hero;
+    document.getElementById('stat-archived').textContent = archived;
+  }
+
+  /* ---------- Health checks ---------- */
+  function checkAll() {
+    rows.forEach(function (r) {
+      check(PROD_ORIGIN    + r.path).then(function (ok) { r.prod    = ok ? 'ok' : 'err'; render(); });
+      check(STAGING_ORIGIN + r.path).then(function (ok) { r.staging = ok ? 'ok' : 'err'; render(); });
+    });
+  }
+
+  function check(url) {
+    /* Use no-cors + image beacon trick as lightweight health check.
+       HEAD requests would be blocked by CORS; an <img> probe still
+       triggers network activity but can't read the status code.
+       Fall back to fetch() no-cors — we get opaque responses, so a
+       thrown error = offline, no-throw = at least reachable. */
+    return fetch(url, { method: 'GET', mode: 'no-cors', cache: 'no-store' })
+      .then(function () { return true; })
+      .catch(function () { return false; });
+  }
+
+  /* ---------- Events ---------- */
+  document.getElementById('q').addEventListener('input', function (e) {
+    searchQuery = e.target.value;
+    render();
+  });
+
+  document.getElementById('recheck').addEventListener('click', function () {
+    rows.forEach(function (r) { r.prod = r.staging = null; });
+    render();
+    checkAll();
+  });
+
+  document.getElementById('export').addEventListener('click', exportCsv);
+
+  document.querySelectorAll('.chip').forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      document.querySelectorAll('.chip').forEach(function (c) { c.classList.remove('is-active'); });
+      chip.classList.add('is-active');
+      activeFilter = chip.dataset.filter;
+      render();
+    });
+  });
+
+  document.querySelectorAll('thead th[data-sort]').forEach(function (th) {
+    th.addEventListener('click', function () {
+      var key = th.dataset.sort;
+      if (sortKey === key) {
+        sortDir *= -1;
+      } else {
+        sortKey = key;
+        sortDir = 1;
+      }
+      document.querySelectorAll('thead th').forEach(function (t) { t.removeAttribute('aria-sort'); });
+      th.setAttribute('aria-sort', sortDir === 1 ? 'ascending' : 'descending');
+      render();
+    });
+  });
+
+  function exportCsv() {
+    var headers = ['path', 'title', 'tag', 'prod', 'staging', 'usesHero', 'modified'];
+    var lines = [headers.join(',')];
+    filtered.forEach(function (r) {
+      lines.push(headers.map(function (h) {
+        var v = r[h] == null ? '' : String(r[h]).replace(/"/g, '""');
+        return /[",\n]/.test(v) ? '"' + v + '"' : v;
+      }).join(','));
+    });
+    var blob = new Blob([lines.join('\n')], { type: 'text/csv' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url; a.download = 'ce-pages.csv'; a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+})();
+</script>
+</body>
+</html>

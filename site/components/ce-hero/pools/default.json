@@ -1,0 +1,37 @@
+{
+  "name": "default",
+  "description": "CE canonical hero image pool — curated portfolio stills. Served same-origin, no staging dependency. Each jpg has a webp sibling; the component picks webp when the browser supports it.",
+  "base": "/assets/hero-pool/",
+  "images": [
+    "Day_8_chair.jpg",
+    "Day_8_sign.jpg",
+    "Gen_air1.jpg",
+    "Tempo_0001_spark.jpg",
+    "Tempo_0004_Eko.jpg",
+    "Tempo_0005_Buff.jpg",
+    "Tempo_0006_Bank.jpg",
+    "Tempo_0008_Bag.jpg",
+    "Tempo_0009_Muele.jpg",
+    "Tempo_0011_digestible.jpg",
+    "Tempo_0012_lenskart.jpg",
+    "Tempo_0013_Kokomodo.jpg",
+    "Tempo_0014_Lenskart_Nia.jpg",
+    "Tempo_0015_Layer_0.jpg"
+  ],
+  "webp": {
+    "Day_8_chair.jpg": "Day_8_chair.webp",
+    "Day_8_sign.jpg": "Day_8_sign.webp",
+    "Gen_air1.jpg": "Gen_air1.webp",
+    "Tempo_0001_spark.jpg": "Tempo_0001_spark.webp",
+    "Tempo_0004_Eko.jpg": "Tempo_0004_Eko.webp",
+    "Tempo_0005_Buff.jpg": "Tempo_0005_Buff.webp",
+    "Tempo_0006_Bank.jpg": "Tempo_0006_Bank.webp",
+    "Tempo_0008_Bag.jpg": "Tempo_0008_Bag.webp",
+    "Tempo_0009_Muele.jpg": "Tempo_0009_Muele.webp",
+    "Tempo_0011_digestible.jpg": "Tempo_0011_digestible.webp",
+    "Tempo_0012_lenskart.jpg": "Tempo_0012_lenskart.webp",
+    "Tempo_0013_Kokomodo.jpg": "Tempo_0013_Kokomodo.webp",
+    "Tempo_0014_Lenskart_Nia.jpg": "Tempo_0014_Lenskart_Nia.webp",
+    "Tempo_0015_Layer_0.jpg": "Tempo_0015_Layer_0.webp"
+  }
+}

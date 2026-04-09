@@ -1,0 +1,52 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+
+  "buildCommand": null,
+  "outputDirectory": "site",
+  "cleanUrls": true,
+  "trailingSlash": true,
+
+  "headers": [
+    {
+      "source": "/components/ce-hero/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/assets/hero-pool/(.*\\.(jpg|webp|png))",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/assets/(.*\\.(jpg|jpeg|png|webp|svg|woff2?))",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=2592000" }
+      ]
+    },
+    {
+      "source": "/sitemap/(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" },
+        { "key": "Cache-Control", "value": "public, max-age=300" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+      ]
+    }
+  ],
+
+  "redirects": [
+    { "source": "/figma-story",       "destination": "/essays/subject-matter-expert/", "permanent": true },
+    { "source": "/figma-story/",      "destination": "/essays/subject-matter-expert/", "permanent": true },
+    { "source": "/wexelerate",        "destination": "/deck/",                         "permanent": true },
+    { "source": "/wexelerate/:path*", "destination": "/deck/:path*",                   "permanent": true }
+  ]
+}
