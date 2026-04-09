@@ -177,6 +177,13 @@
       font-weight: 500;
       max-width: 240px;
     }
+    td.title a {
+      color: var(--black);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    td.title a:hover { border-bottom-color: var(--red); color: var(--red); }
 
     /* ── Status pills ── */
     .pill {
@@ -390,9 +397,12 @@
 
   function rowHtml(r, i) {
     var tagClass = r.tag || 'draft';
+    var title = esc(r.title || '—');
+    var path  = esc(r.path);
+    var href  = esc(PROD_ORIGIN + r.path);
     return '<tr data-i="' + i + '">' +
-      '<td class="path"><a href="' + esc(r.path) + '" target="_blank" rel="noopener">' + esc(r.path) + '</a></td>' +
-      '<td class="title">' + esc(r.title || '—') + '</td>' +
+      '<td class="path"><a href="' + href + '" target="_blank" rel="noopener">' + path + '</a></td>' +
+      '<td class="title"><a href="' + href + '" target="_blank" rel="noopener">' + title + '</a></td>' +
       '<td><span class="tag ' + tagClass + '">' + esc(tagClass) + '</span></td>' +
       '<td>' + pillHtml(r.prod) + '</td>' +
       '<td>' + pillHtml(r.staging) + '</td>' +
