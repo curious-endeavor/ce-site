@@ -8,32 +8,32 @@
 
   "headers": [
     {
-      "source": "/components/ce-hero/(.*)",
+      "source": "/components/ce-hero/:path*",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }
       ]
     },
     {
-      "source": "/assets/hero-pool/(.*\\.(jpg|webp|png))",
+      "source": "/assets/hero-pool/:path*",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     },
     {
-      "source": "/assets/(.*\\.(jpg|jpeg|png|webp|svg|woff2?))",
+      "source": "/assets/:path*",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=2592000" }
       ]
     },
     {
-      "source": "/sitemap/(.*)",
+      "source": "/sitemap/:path*",
       "headers": [
         { "key": "X-Robots-Tag", "value": "noindex, nofollow" },
         { "key": "Cache-Control", "value": "public, max-age=300" }
       ]
     },
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "headers": [
         { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
         { "key": "X-Content-Type-Options", "value": "nosniff" },
