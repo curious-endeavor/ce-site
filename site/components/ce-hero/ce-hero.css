@@ -119,24 +119,13 @@
   margin: 0;
 }
 
-/* ── Tablet — fluid 3×3 contained to viewport, no bleed ── */
-@media (max-width: 1200px) {
-  .ce-hero {
-    height: auto;
-    min-height: 100vh;
-  }
+/* ── Tablet — drop the 8% bleed so the grid fits the viewport exactly.
+      Grid stays absolute-centered inside a 100vh .ce-hero, same as figma-story. ── */
+@media (max-width: 900px) {
   .ce-hero-grid {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
     width: 100%;
-    height: auto;
-    min-height: 100vh;
-    padding: 12px;
+    height: 100%;
   }
-  .ce-hero-title { font-size: clamp(16px, 2.8vw, 28px); }
-  .ce-hero-subtitle { font-size: clamp(11px, 1.1vw, 13px); }
 }
 
 /* ── Phone — brick-wall layout (ported from Subject Matter Expert) ── */
